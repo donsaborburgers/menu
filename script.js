@@ -29,7 +29,7 @@ function enviarPedido() {
         mensaje += `${index + 1}. ${item}\n`;
     });
 
-    let telefono = '549123456789'; // Reemplaza con el número al que quieres enviar el pedido
+    let telefono = '595973547459'; // Reemplaza con el número al que quieres enviar el pedido
     let urlWhatsApp = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     
     window.open(urlWhatsApp, '_blank');
