@@ -3,7 +3,21 @@ let pedido = [];
 function addItem(item) {
     pedido.push(item);
     actualizarPedido();
+    mostrarNotificacion();
 }
+
+function mostrarNotificacion() {
+    const notification = document.getElementById('notification');
+    notification.classList.remove('hidden');
+    notification.classList.add('show');
+
+    // Oculta la notificación después de 2 segundos
+    setTimeout(() => {
+        notification.classList.remove('show');
+        notification.classList.add('hidden');
+    }, 2000);
+}
+
 
 function actualizarPedido() {
     const pedidoDiv = document.getElementById('pedido');
