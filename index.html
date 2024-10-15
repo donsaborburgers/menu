@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Hamburguesas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Menú de Hamburguesas</h1>
+        <div class="menu">
+            <div class="item">
+                <h2>Hamburguesa Clásica</h2>
+                <p>Carne, lechuga, tomate, queso, pan artesanal.</p>
+                <button onclick="addItem('Hamburguesa Clásica')">Agregar</button>
+            </div>
+            <div class="item">
+                <h2>Hamburguesa BBQ</h2>
+                <p>Carne, queso cheddar, cebolla crispy, salsa BBQ.</p>
+                <button onclick="addItem('Hamburguesa BBQ')">Agregar</button>
+            </div>
+            <div class="item">
+                <h2>Hamburguesa Vegana</h2>
+                <p>Portobello, lechuga, tomate, salsa vegana, pan integral.</p>
+                <button onclick="addItem('Hamburguesa Vegana')">Agregar</button>
+            </div>
+            <div class="item">
+                <h2>Papas Fritas</h2>
+                <p>Crujientes papas fritas.</p>
+                <button onclick="addItem('Papas Fritas')">Agregar</button>
+            </div>
+            <div class="item">
+                <h2>Bebida</h2>
+                <p>Bebida a elección: Coca-Cola, Sprite, Agua.</p>
+                <button onclick="addItem('Bebida')">Agregar</button>
+            </div>
+        </div>
+        <h2>Pedido:</h2>
+        <div id="pedido"></div>
+        <button class="send-button" onclick="enviarPedido()">Finalizar Pedido</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
