@@ -13,7 +13,7 @@ body {
     max-width: 700px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, 0.8); 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -105,26 +105,34 @@ p {
     color: #333;
 }
 
+/* Estilo para el botón de Finalizar Pedido */
 .send-button {
-    display: block;
-    width: 100%;
-    padding: 15px;
     background-color: #007bff;
     color: white;
     border: none;
+    padding: 15px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
     font-size: 16px;
     text-align: center;
     transition: background-color 0.3s ease;
+    position: fixed; /* Botón fijo en la parte inferior */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 90%;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
 }
 
 .send-button:hover {
     background-color: #0056b3;
 }
 
-/* Notificación */
+.hidden {
+    display: none;
+}
+
 #notification {
     position: fixed;
     top: 20px;
@@ -145,8 +153,4 @@ p {
 #notification.hidden {
     opacity: 0;
     pointer-events: none;
-}
-
-.hidden {
-    display: none;
 }

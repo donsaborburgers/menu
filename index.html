@@ -105,9 +105,12 @@
         </div>
         <h2>Pedido:</h2>
         <div id="pedido"></div>
-        <button class="send-button" onclick="enviarPedido()">Finalizar Pedido</button>
+
+        <!-- Botón de finalizar pedido, inicialmente oculto -->
+        <button id="finalizarPedidoBtn" class="send-button hidden" onclick="enviarPedido()">Finalizar Pedido</button>
 
         <div id="notification" class="hidden">Artículo añadido al pedido</div>
+    </div>
     </div>
 
     <script src="script.js"></script>
