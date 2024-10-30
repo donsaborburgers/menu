@@ -111,6 +111,24 @@ p {
     background-color: #218838;
 }
 
+.add-button2 {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón ocupe todo el ancho */
+    display: block; /* Asegura que ocupe toda la línea */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.add-button2:hover {
+    background-color: #218838;
+}
+
+
 #pedido {
     margin-top: 20px;
     padding: 15px;
