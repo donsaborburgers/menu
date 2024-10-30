@@ -22,7 +22,7 @@ function addItem(item, precio, cantidad) {
 
 
 function confirmarPedido() {
-    // Obtener el producto, precio base y cantidad desde los atributos del modal
+    // Obtener el producto, precio base y cantidad desde los atributos del 
     const itemActual = document.getElementById('extrasModal').getAttribute('data-item');
     const precioActual = parseFloat(document.getElementById('extrasModal').getAttribute('data-precio'));
     const cantidadActual = parseInt(document.getElementById('extrasModal').getAttribute('data-cantidad'));
@@ -153,7 +153,7 @@ function enviarPedido() {
 const telefono = '595973547459'; // Sustituye XXXXXXXXX por tu número de teléfono (sin el símbolo + ni espacios)
 const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
-    window.open(url, '_blank');
+window.open(url, '_blank');
 }
 
 // Función para actualizar el subtotal en tiempo real

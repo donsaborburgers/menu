@@ -17,7 +17,7 @@
                     <p>Pan classic, doble ultra smash (70g cada), doble cheddar, tomate en fetas, lechuga repollada, mayo ajo.</p>
 
                     <p class='price'>Precio Gs <span class="precio" id="precio-clasica">20000</span></p>
-                                                            <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                    <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
 
                     <p class='price'>Precio en Combo Gs <span class="precio" id="precio-clasica-combo">30000</span> </p>
                     
@@ -27,7 +27,7 @@
                     </div>
 
                     <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Pedir</button>
-<button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Pedir Combo</button>
+                    <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Pedir Combo</button>
 
 
                 </div>
@@ -52,88 +52,62 @@
     <script src="script.js"></script>
 
     <!-- Modal -->
-<div id="extrasModal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close" onclick="cerrarModal()">&times;</span>
-        <h2>Selecciona Extras</h2>
-        
-        <label class="custom-checkbox">
-            <input type="checkbox" id="extraCarne" onchange="toggleInput('extraCarne', 'cantidadExtraCarne')">
-            <span class="checkmark"></span>
-            Extra Carne (Gs 5000):
+    <div id="extrasModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Selecciona Extras</h2>
 
-            <div class="quantity-container1">
-                        <label for="cantidadExtraCarne"> </label>
-                        <input type="number" id="cantidadExtraCarne" value="1" min="1">
-                    </div>
-        </label><br>
-
-        <label class="custom-checkbox">
-            <input type="checkbox" id="extraCheddar" onchange="toggleInput('extraCheddar', 'cantidadExtraCheddar')">
-            <span class="checkmark"></span>
-            Extra Cheddar (Gs 2000):
-
-            <div class="quantity-container1">
-                        <label for="cantidadExtraCheddar"> </label>
-                        <input type="number" id="cantidadExtraCheddar" value="1" min="1">
-                    </div>
-        </label><br>
-        
-        <label class="custom-checkbox">
-            <input type="checkbox" id="extraBacon" onchange="toggleInput('extraBacon', 'cantidadExtraBacon')">
-            <span class="checkmark"></span>
-            Extra Bacon (Gs 3000):
-
-            <div class="quantity-container1">
-                        <label for="cantidadExtraBacon"> </label>
-                        <input type="number" id="cantidadExtraBacon" value="1" min="1">
-                    </div>
-
-        </label><br>
-
-        <label class="custom-checkbox">
-            <input type="checkbox" id="extraHuevo" onchange="toggleInput('extraHuevo', 'cantidadExtraHuevo')">
-            <span class="checkmark"></span>
-            Extra Huevo Frito (Gs 4000):
-
-<div class="quantity-container1">
-                        <label for="cantidadExtraHuevo"> </label>
-                        <input type="number" id="cantidadExtraHuevo" value="1" min="1">
-                    </div>
-
-        </label><br>
-
-        <label class="custom-checkbox">
-            <input type="checkbox" id="extraLechuga" onchange="toggleInput('extraLechuga', 'cantidadExtraLechuga')">
-            <span class="checkmark"></span>
-            Extra Lechuga (Gs 2000):
-
-            <div class="quantity-container1">
-                        <label for="cantidadExtraLechuga"> </label>
-                        <input type="number" id="cantidadExtraLechuga" value="1" min="1">
-                    </div>
-        </label><br>
-
-        <label class="custom-checkbox">
-            <input type="checkbox" id="extraTomate" onchange="toggleInput('extraTomate', 'cantidadExtraTomate')">
-            <span class="checkmark"></span>
-            Extra Tomate (Gs 1000):
-
-<div class="quantity-container1">
-                        <label for="cantidadExtraTomate"> </label>
-                        <input type="number" id="cantidadExtraTomate" value="1" min="1">
-                    </div>
-
-        </label><br>
+            <label class="custom-checkbox">
+                <input type="checkbox" id="extraCarne" onchange="toggleInput('extraCarne', 'cantidadExtraCarne')">
+                <span class="checkmark"></span>
+                Extra Carne (Gs 5000):
+                <input type="number" id="cantidadExtraCarne" value="0" min="0" disabled>
+            </label><br>
 
 
-        <label>
-            <input type="text" id="otrosExtras" placeholder="Observaciones">
-        </label><br><br>
-        
-        <button class="add-button" onclick="confirmarPedido()">Confirmar Pedido</button>
+            <label class="custom-checkbox">
+                <input type="checkbox" id="extraCheddar" onchange="toggleInput('extraCheddar', 'cantidadExtraCheddar')">
+                <span class="checkmark"></span>
+                Extra Cheddar (Gs 2000):
+                <input type="number" id="cantidadExtraCheddar" value="0" min="0" disabled>
+            </label><br>
+
+            <label class="custom-checkbox">
+                <input type="checkbox" id="extraBacon" onchange="toggleInput('extraBacon', 'cantidadExtraBacon')">
+                <span class="checkmark"></span>
+                Extra Bacon (Gs 3000):
+                <input type="number" id="cantidadExtraBacon" value="0" min="0" disabled>
+            </label><br>
+
+            <label class="custom-checkbox">
+                <input type="checkbox" id="extraHuevo" onchange="toggleInput('extraHuevo', 'cantidadExtraHuevo')">
+                <span class="checkmark"></span>
+                Extra Huevo Frito (Gs 4000):
+                <input type="number" id="cantidadExtraHuevo" value="0" min="0" disabled>
+            </label><br>
+
+            <label class="custom-checkbox">
+                <input type="checkbox" id="extraLechuga" onchange="toggleInput('extraLechuga', 'cantidadExtraLechuga')">
+                <span class="checkmark"></span>
+                Extra Lechuga (Gs 2000):
+                <input type="number" id="cantidadExtraLechuga" value="0" min="0" disabled>
+            </label><br>
+
+            <label class="custom-checkbox">
+                <input type="checkbox" id="extraTomate" onchange="toggleInput('extraTomate', 'cantidadExtraTomate')">
+                <span class="checkmark"></span>
+                Extra Tomate (Gs 1000):
+                <input type="number" id="cantidadExtraTomate" value="0" min="0" disabled>
+            </label><br>
+
+
+            <label>
+                <input type="text" id="otrosExtras" placeholder="Observaciones">
+            </label><br><br>
+
+            <button class="add-button" onclick="confirmarPedido()">Confirmar Pedido</button>
+        </div>
     </div>
-</div>
 
 
 
