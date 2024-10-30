@@ -220,27 +220,24 @@ p {
     display: none;
 }
 
-#notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #28a745;
+
+
+.notification {
+    display: none; /* Oculta la notificación por defecto */
+    background-color: #4caf50; /* Verde */
     color: white;
-    padding: 10px 20px;
+    padding: 15px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
-#notification.show {
-    opacity: 1;
+.notification.show {
+    display: block; /* Muestra la notificación */
 }
 
-#notification.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
 
 #pedido {
     margin-top: 20px;

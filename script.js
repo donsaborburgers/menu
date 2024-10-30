@@ -19,6 +19,51 @@ function addItem(item, precio, cantidad) {
     document.getElementById('extrasModal').classList.remove('hidden');
 }
 
+// Función para añadir un ítem sin extras
+function addItem1(item, precio, cantidad) {
+    // Convertir precio y cantidad a números
+    const precioBase = parseFloat(precio);
+    const cantidadItem = parseInt(cantidad);
+
+    // Calcular el subtotal para este ítem
+    const subtotal = precioBase * cantidadItem;
+
+    // Agregar el artículo al pedido
+    pedido.push({ item: item, cantidad: cantidadItem, precio: subtotal });
+
+    // Actualizar visualmente el pedido
+    actualizarPedido();
+
+    // Sumar el subtotal al total general
+    total += subtotal;
+    document.getElementById('total').innerText = total.toFixed(0); // Mostrar total actualizado
+
+    // Actualizar el texto del botón de finalizar pedido con el total
+    const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
+    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+
+    // Mostrar notificación de éxito
+    mostrarNotificacion();
+    finalizarPedidoBtn.classList.remove('hidden');
+
+    // Resetear la cantidad del ítem a 1 después de confirmar el pedido
+    document.getElementById('cantidad-clasica').value = 1;
+}
+
+
+// Función para actualizar la visualización del pedido
+function actualizarPedido() {
+    const pedidoDiv = document.getElementById('pedido');
+    pedidoDiv.innerHTML = ''; // Limpiar el contenido previo
+
+    pedido.forEach((articulo) => {
+        const p = document.createElement('p');
+        p.innerText = `${articulo.cantidad}x ${articulo.item} - Gs${(articulo.precio).toFixed(0)}`;
+        pedidoDiv.appendChild(p);
+    });
+}
+
+
 
 
 function confirmarPedido() {
@@ -95,26 +140,20 @@ function confirmarPedido() {
 
 
 
-// Función para actualizar la visualización del pedido
-function actualizarPedido() {
-    const pedidoDiv = document.getElementById('pedido');
-    pedidoDiv.innerHTML = ''; // Limpiar el contenido previo
 
-    pedido.forEach((articulo) => {
-        const p = document.createElement('p');
-        p.innerText = `${articulo.cantidad}x ${articulo.item} - Gs${(articulo.precio).toFixed(0)}`;
-        pedidoDiv.appendChild(p);
-    });
-}
 
 // Función para mostrar la notificación
 function mostrarNotificacion() {
     const notificacion = document.getElementById('notification');
-    notificacion.classList.add('show');
+    notificacion.classList.remove('hidden'); // Asegúrate de eliminar la clase hidden
+    notificacion.classList.add('show'); // Añadir la clase show
+
     setTimeout(() => {
-        notificacion.classList.remove('show');
+        notificacion.classList.remove('show'); // Eliminar la clase show después de 2 segundos
+        notificacion.classList.add('hidden'); // Añadir la clase hidden para ocultar
     }, 2000); // Mostrar la notificación por 2 segundos
 }
+
 
 function cerrarModal() {
     // Ocultar el modal
@@ -212,3 +251,32 @@ function toggleInput(checkboxId, inputId) {
         input.value = 0;
     }
 }
+
+// Función para mostrar el resumen del pedido
+function verResumenPedido() {
+    // Limpiar el contenido previo del resumen
+    const resumenDiv = document.getElementById('resumenPedido');
+    resumenDiv.innerHTML = '';
+
+    // Crear el contenido del resumen
+    pedido.forEach(articulo => {
+        const p = document.createElement('p');
+        p.innerText = `${articulo.cantidad}x ${articulo.item} - Gs${articulo.precio.toFixed(0)}`;
+        resumenDiv.appendChild(p);
+    });
+
+    // Mostrar el total en el resumen
+    const totalResumen = document.getElementById('totalResumen');
+    totalResumen.innerText = `Total: Gs${total.toFixed(0)}`;
+
+    // Mostrar el modal
+    document.getElementById('resumenModal').classList.remove('hidden');
+}
+
+// Función para cerrar el modal
+function cerrarResumenModal() {
+    // Ocultar el modal
+    document.getElementById('resumenModal').classList.add('hidden');
+}
+
+
