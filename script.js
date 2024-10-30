@@ -83,6 +83,7 @@ function confirmarPedido() {
 
     // Resetear la cantidad de las hamburguesas a 1 después de confirmar el pedido
     document.getElementById('cantidad-clasica').value = 1;
+    document.getElementById('cantidad-bacon').value = 1;
 
     // Finalmente cerrar el modal
 
@@ -113,9 +114,10 @@ function mostrarNotificacion() {
 }
 
 function cerrarModal() {
+    // Ocultar el modal
     document.getElementById('extrasModal').classList.add('hidden');
     
-    // Resetear los valores del modal
+    // Resetear los valores de los inputs de cantidad
     document.getElementById('cantidadExtraCarne').value = 0;
     document.getElementById('cantidadExtraCheddar').value = 0;
     document.getElementById('cantidadExtraBacon').value = 0;
@@ -123,16 +125,33 @@ function cerrarModal() {
     document.getElementById('cantidadExtraLechuga').value = 0;
     document.getElementById('cantidadExtraTomate').value = 0;
 
+    // Resetear los checkboxes
+    document.getElementById('extraCarne').checked = false;
+    document.getElementById('extraCheddar').checked = false;
+    document.getElementById('extraBacon').checked = false;
+    document.getElementById('extraHuevo').checked = false;
+    document.getElementById('extraLechuga').checked = false;
+    document.getElementById('extraTomate').checked = false;
+
+    // Deshabilitar todos los inputs de cantidad
+    document.getElementById('cantidadExtraCarne').disabled = true;
+    document.getElementById('cantidadExtraCheddar').disabled = true;
+    document.getElementById('cantidadExtraBacon').disabled = true;
+    document.getElementById('cantidadExtraHuevo').disabled = true;
+    document.getElementById('cantidadExtraLechuga').disabled = true;
+    document.getElementById('cantidadExtraTomate').disabled = true;
+
+    // Resetear el campo de texto de "otrosExtras"
     document.getElementById('otrosExtras').value = '';
-    
-    // Limpiar los atributos del modal
+
+    // Limpiar los atributos de datos del modal
     document.getElementById('extrasModal').removeAttribute('data-item');
     document.getElementById('extrasModal').removeAttribute('data-precio');
     document.getElementById('extrasModal').removeAttribute('data-cantidad');
-
-    // Resetear la cantidad de las hamburguesas a 1
-    document.getElementById('cantidad-clasica').value = 1; // Si tienes más items, haz lo mismo con sus respectivos IDs
 }
+
+
+
 
 
 
