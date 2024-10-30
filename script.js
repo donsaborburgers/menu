@@ -22,7 +22,7 @@ function addItem(item, precio, cantidad) {
 
 
 function confirmarPedido() {
-    // Obtener el producto, precio base y cantidad desde los atributos del 
+    // Obtener el producto, precio base y cantidad desde los atributos del modal
     const itemActual = document.getElementById('extrasModal').getAttribute('data-item');
     const precioActual = parseFloat(document.getElementById('extrasModal').getAttribute('data-precio'));
     const cantidadActual = parseInt(document.getElementById('extrasModal').getAttribute('data-cantidad'));
@@ -40,27 +40,27 @@ function confirmarPedido() {
     // Añadir extras al subtotal
     if (cantidadExtraCarne > 0) {
         extrasTexto.push(`Extra Carne x${cantidadExtraCarne}`);
-        subtotal += 5000 * cantidadExtraCarne; // Precio del extra Carne
+        subtotal += 5000 * cantidadExtraCarne;
     }
     if (cantidadExtraCheddar > 0) {
         extrasTexto.push(`Extra Cheddar x${cantidadExtraCheddar}`);
-        subtotal += 2000 * cantidadExtraCheddar; // Precio del extra Bacon
+        subtotal += 2000 * cantidadExtraCheddar;
     }
     if (cantidadExtraBacon > 0) {
         extrasTexto.push(`Extra Bacon x${cantidadExtraBacon}`);
-        subtotal += 3000 * cantidadExtraBacon; // Precio del extra Bacon
+        subtotal += 3000 * cantidadExtraBacon;
     }
     if (cantidadExtraHuevo > 0) {
         extrasTexto.push(`Extra Huevo Frito x${cantidadExtraHuevo}`);
-        subtotal += 4000 * cantidadExtraHuevo; // Precio del extra Bacon
+        subtotal += 4000 * cantidadExtraHuevo;
     }
     if (cantidadExtraLechuga > 0) {
         extrasTexto.push(`Extra Lechuga x${cantidadExtraLechuga}`);
-        subtotal += 2000 * cantidadExtraLechuga; // Precio del extra Bacon
+        subtotal += 2000 * cantidadExtraLechuga;
     }
     if (cantidadExtraTomate > 0) {
         extrasTexto.push(`Extra Tomate x${cantidadExtraTomate}`);
-        subtotal += 1000 * cantidadExtraTomate; // Precio del extra Bacon
+        subtotal += 1000 * cantidadExtraTomate;
     }
     if (document.getElementById('otrosExtras').value) {
         extrasTexto.push(document.getElementById('otrosExtras').value);
@@ -78,17 +78,20 @@ function confirmarPedido() {
     total += subtotal;
     document.getElementById('total').innerText = total.toFixed(0); // Mostrar total actualizado
 
+    // Actualizar el texto del botón con el total entre paréntesis
+    const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
+    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+
     mostrarNotificacion();
-    document.getElementById('finalizarPedidoBtn').classList.remove('hidden');
+    finalizarPedidoBtn.classList.remove('hidden');
 
     // Resetear la cantidad de las hamburguesas a 1 después de confirmar el pedido
     document.getElementById('cantidad-clasica').value = 1;
     document.getElementById('cantidad-bacon').value = 1;
 
-    // Finalmente cerrar el modal
-
     cerrarModal();
 }
+
 
 
 

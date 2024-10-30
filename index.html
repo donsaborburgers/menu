@@ -11,7 +11,7 @@
         <h1>Menú de Burgers</h1>
         <div class="menu">
             <div class="item">
-                <img src="imagenes/nuggets.png" alt="Hamburguesa Clásica">
+                <img src="imagenes/classic.png" alt="Hamburguesa Clásica">
                 <div class="item-details">
                     <h2>Classic Burger</h2>
                     <p>Pan classic, doble ultra smash (70g cada), doble cheddar, tomate en fetas, lechuga repollada, mayo ajo.</p>
@@ -26,8 +26,12 @@
                         <input type="number" id="cantidad-clasica" value="1" min="1">
                     </div>
 
-                    <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Pedir</button>
-                    <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Pedir Combo</button>
+
+                    <div class="button-container">
+                        <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Pedir</button>
+                        <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Pedir Combo</button>
+                    </div>
+
 
 
                 </div>
@@ -48,9 +52,10 @@
                         <label for="cantidad-bacon">Cantidad:</label>
                         <input type="number" id="cantidad-bacon" value="1" min="1">
                     </div>
-
-                    <button class="add-button" onclick="addItem('Bacon Burger', 20000, document.getElementById('cantidad-bacon').value)">Pedir</button>
-                    <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-bacon').value)">Pedir Combo</button>
+                    <div class="button-container">
+                        <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Pedir</button>
+                        <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Pedir Combo</button>
+                    </div>
 
 
                 </div>
@@ -72,9 +77,10 @@
                         <label for="cantidad-clasica">Cantidad:</label>
                         <input type="number" id="cantidad-clasica" value="1" min="1">
                     </div>
-
-                    <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Pedir</button>
-                    <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Pedir Combo</button>
+                    <div class="button-container">
+                        <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Pedir</button>
+                        <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Pedir Combo</button>
+                    </div>
 
 
                 </div>
@@ -92,7 +98,11 @@
         </div>
 
         <!-- Botón de finalizar pedido, inicialmente oculto -->
-        <button id="finalizarPedidoBtn" class="send-button hidden" onclick="enviarPedido()">Finalizar Pedido</button>
+        <button id="finalizarPedidoBtn" class="send-button hidden" onclick="enviarPedido()">Pedir por Whatsapp</button>
+
+        <!-- Botón de finalizar pedido, inicialmente oculto -->
+        <button id="finalizarPedidoBtn" class="send-button hidden" onclick="enviarPedido()">Pedir por Whatsapp (Gs 0)</button>
+
 
         <div id="notification" class="hidden">Artículo añadido al pedido</div>
     </div>
