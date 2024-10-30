@@ -280,3 +280,8 @@ function cerrarResumenModal() {
 }
 
 
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0); // Desplazar a la parte superior
+});
+
+

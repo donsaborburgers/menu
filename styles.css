@@ -220,23 +220,26 @@ p {
     display: none;
 }
 
-
-
 .notification {
     display: none; /* Oculta la notificación por defecto */
     background-color: #4caf50; /* Verde */
     color: white;
     padding: 15px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 1000;
-    border-radius: 5px;
+    position: fixed; /* Fijar la posición */
+    top: 30px; /* Distancia desde la parte superior */
+    right: 30px; /* Distancia desde el lado derecho */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: opacity 0.5s ease; /* Transición suave para el efecto de aparición */
+    opacity: 0; /* Inicialmente invisible */
 }
 
 .notification.show {
     display: block; /* Muestra la notificación */
+    opacity: 1; /* Hacerla visible */
 }
+
+
 
 
 #pedido {
