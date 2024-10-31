@@ -16,10 +16,13 @@ input[type="checkbox"] {
 /* Estilos para las pestañas */
 .tab {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+    gap: 10px; /* Espaciado entre botones */
 }
 
+/* Estilos para los botones de pestañas */
 .tab button {
     background-color: #f1f1f1;
     border: none;
@@ -28,8 +31,9 @@ input[type="checkbox"] {
     cursor: pointer;
     font-size: 16px;
     transition: 0.3s;
-    margin: 0 5px;
     border-radius: 5px;
+    flex: 1 1 120px; /* Ancho mínimo para cada botón */
+    max-width: 200px; /* Ancho máximo para mantener consistencia */
 }
 
 .tab button:hover {
@@ -41,6 +45,7 @@ input[type="checkbox"] {
     color: white;
 }
 
+/* Mostrar el contenido de las pestañas */
 .tabcontent {
     display: none;
 }
@@ -48,6 +53,19 @@ input[type="checkbox"] {
 .tabcontent.active {
     display: block;
 }
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tab {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab button {
+        width: 100%; /* Botones ocupan el ancho completo en pantallas pequeñas */
+    }
+}
+
 
 
 /* Contenedor que agrupa la información de productos y el botón de finalizar */
