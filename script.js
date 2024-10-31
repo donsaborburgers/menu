@@ -19,6 +19,20 @@ function addItem(item, precio, cantidad) {
     document.getElementById('extrasModal').classList.remove('hidden');
 }
 
+function addItemLomi(item, precio, cantidad) {
+    // Convertir precio y cantidad a números
+    const precioBase = parseFloat(precio);
+    const cantidadItem = parseInt(cantidad);
+
+    // Almacenar los valores temporalmente en el modal (podemos usarlos localmente luego)
+    document.getElementById('extrasModalLomi').setAttribute('data-item', item);
+    document.getElementById('extrasModalLomi').setAttribute('data-precio', precioBase);
+    document.getElementById('extrasModalLomi').setAttribute('data-cantidad', cantidadItem);
+
+    // Abrir modal para seleccionar extras
+    document.getElementById('extrasModalLomi').classList.remove('hidden');
+}
+
 // Función para añadir un ítem sin extras
 function addItem1(item, precio, cantidad) {
     // Convertir precio y cantidad a números
@@ -137,6 +151,77 @@ function confirmarPedido() {
     cerrarModal();
 }
 
+function confirmarPedido1() {
+    // Obtener el producto, precio base y cantidad desde los atributos del modal
+    const itemActual = document.getElementById('extrasModalLomi').getAttribute('data-item');
+    const precioActual = parseFloat(document.getElementById('extrasModalLomi').getAttribute('data-precio'));
+    const cantidadActual = parseInt(document.getElementById('extrasModalLomi').getAttribute('data-cantidad'));
+
+    const cantidadExtraLomi = parseInt(document.getElementById('cantidadExtraLomi').value) || 0;
+    const cantidadExtraMuzza = parseInt(document.getElementById('cantidadExtraMuzza').value) || 0;
+    const cantidadExtraBacon1 = parseInt(document.getElementById('cantidadExtraBacon1').value) || 0;
+    const cantidadExtraHuevo1 = parseInt(document.getElementById('cantidadExtraHuevo1').value) || 0;
+    const cantidadExtraLechuga1 = parseInt(document.getElementById('cantidadExtraLechuga1').value) || 0;
+    const cantidadExtraTomate1 = parseInt(document.getElementById('cantidadExtraTomate1').value) || 0;
+
+    let extrasTexto = [];
+    let subtotal = precioActual * cantidadActual; // Precio del ítem base por la cantidad
+
+    // Añadir extras al subtotal
+    if (cantidadExtraLomi > 0) {
+        extrasTexto.push(`${cantidadExtraLomi}x Extra Lomi`);
+        subtotal += 7000 * cantidadExtraLomi;
+    }
+    if (cantidadExtraMuzza > 0) {
+        extrasTexto.push(`${cantidadExtraMuzza}x Extra Muzarella x`);
+        subtotal += 2000 * cantidadExtraMuzza;
+    }
+    if (cantidadExtraBacon1 > 0) {
+        extrasTexto.push(`${cantidadExtraBacon1}x Extra Bacon`);
+        subtotal += 3000 * cantidadExtraBacon1;
+    }
+    if (cantidadExtraHuevo1 > 0) {
+        extrasTexto.push(`${cantidadExtraHuevo1}x Extra Huevo Frito`);
+        subtotal += 4000 * cantidadExtraHuevo1;
+    }
+    if (cantidadExtraLechuga1 > 0) {
+        extrasTexto.push(`${cantidadExtraLechuga1}x Extra Lechuga`);
+        subtotal += 2000 * cantidadExtraLechuga1;
+    }
+    if (cantidadExtraTomate1 > 0) {
+        extrasTexto.push(`${cantidadExtraTomate1}x Extra Tomate`);
+        subtotal += 1000 * cantidadExtraTomate1;
+    }
+    if (document.getElementById('otrosExtras').value) {
+        extrasTexto.push(document.getElementById('otrosExtras').value);
+    }
+
+    const extrasTextoCompleto = extrasTexto.length > 0 ? ` (Extras: ${extrasTexto.join(', ')})` : '';
+
+    // Agregar el artículo con los extras al pedido
+    pedido.push({ item: itemActual + extrasTextoCompleto, cantidad: cantidadActual, precio: subtotal });
+
+    // Actualizar visualmente el pedido
+    actualizarPedido();
+
+    // Sumar el subtotal al total general
+    total += subtotal;
+    document.getElementById('total').innerText = total.toFixed(0); // Mostrar total actualizado
+
+    // Actualizar el texto del botón con el total entre paréntesis
+    const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
+    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+
+    mostrarNotificacion();
+    finalizarPedidoBtn.classList.remove('hidden');
+
+
+    // Resetear las cantidades a 1
+    resetCantidadInputs();
+
+    cerrarModalLomi();
+}
+
 
 
 
@@ -192,6 +277,43 @@ function cerrarModal() {
     document.getElementById('extrasModal').removeAttribute('data-cantidad');
 }
 
+function cerrarModalLomi() {
+    // Ocultar el modal
+    document.getElementById('extrasModalLomi').classList.add('hidden');
+    
+    // Resetear los valores de los inputs de cantidad
+    document.getElementById('cantidadExtraLomi').value = 0;
+    document.getElementById('cantidadExtraMuzza').value = 0;
+    document.getElementById('cantidadExtraBacon1').value = 0;
+    document.getElementById('cantidadExtraHuevo1').value = 0;
+    document.getElementById('cantidadExtraLechuga1').value = 0;
+    document.getElementById('cantidadExtraTomate1').value = 0;
+
+    // Resetear los checkboxes
+    document.getElementById('extraLomi').checked = false;
+    document.getElementById('extraMuzarella').checked = false;
+    document.getElementById('extraBacon1').checked = false;
+    document.getElementById('extraHuevo1').checked = false;
+    document.getElementById('extraLechuga1').checked = false;
+    document.getElementById('extraTomate1').checked = false;
+
+    // Deshabilitar todos los inputs de cantidad
+    document.getElementById('cantidadExtraLomi').disabled = true;
+    document.getElementById('cantidadExtraMuzza').disabled = true;
+    document.getElementById('cantidadExtraBacon1').disabled = true;
+    document.getElementById('cantidadExtraHuevo1').disabled = true;
+    document.getElementById('cantidadExtraLechuga1').disabled = true;
+    document.getElementById('cantidadExtraTomate1').disabled = true;
+
+    // Resetear el campo de texto de "otrosExtras"
+    document.getElementById('otrosExtras').value = '';
+
+    // Limpiar los atributos de datos del modal
+    document.getElementById('extrasModalLomi').removeAttribute('data-item');
+    document.getElementById('extrasModalLomi').removeAttribute('data-precio');
+    document.getElementById('extrasModalLomi').removeAttribute('data-cantidad');
+}
+
 
 
 
@@ -226,6 +348,15 @@ function actualizarSubtotal() {
     const cantidadExtraLechuga = parseInt(document.getElementById('cantidadExtraLechuga').value) || 0;
     const cantidadExtraTomate = parseInt(document.getElementById('cantidadExtraTomate').value) || 0;
 
+    const cantidadExtraLomi = parseInt(document.getElementById('cantidadExtraLomi').value) || 0;
+    const cantidadExtraMuzza = parseInt(document.getElementById('cantidadExtraMuzza').value) || 0;
+    const cantidadExtraBacon1 = parseInt(document.getElementById('cantidadExtraBacon1').value) || 0;
+    const cantidadExtraHuevo1 = parseInt(document.getElementById('cantidadExtraHuevo1').value) || 0;
+    const cantidadExtraLechuga1 = parseInt(document.getElementById('cantidadExtraLechuga1').value) || 0;
+    const cantidadExtraTomate1 = parseInt(document.getElementById('cantidadExtraTomate1').value) || 0;
+
+
+
 
     let subtotal = precioActual * cantidadActual;
     subtotal += 5000 * cantidadExtraCarne;
@@ -234,6 +365,14 @@ function actualizarSubtotal() {
     subtotal += 4000 * cantidadExtraHuevo;
     subtotal += 2000 * cantidadExtraLechuga;
     subtotal += 1000 * cantidadExtraTomate;
+
+    subtotal += 7000 * cantidadExtraLomi;
+    subtotal += 2000 * cantidadExtraMuzza;
+    subtotal += 3000 * cantidadExtraBacon1;
+    subtotal += 4000 * cantidadExtraHuevo1;
+    subtotal += 2000 * cantidadExtraLechuga1;
+    subtotal += 1000 * cantidadExtraTomate1;
+
 
     document.getElementById('subtotal').innerText = subtotal.toFixed(0);
 }
