@@ -102,23 +102,7 @@ p {
     color: #650;
 }
 
-.quantity-container {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-}
 
-.quantity-container label {
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-.quantity-container input {
-    width: 60px;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-}
 
 .button-container {
     display: flex;
@@ -412,17 +396,37 @@ input[type="checkbox"]:checked + .checkmark:after {
 }
 
 
-input[type="number"] {
-    width: 80px; /* Ajusta el ancho */
-    padding: 5px; /* Espacio interno */
-    margin-left: 10px; /* Espacio entre el texto y el input */
-    border: 1px solid #ddd; /* Borde más claro */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #f9f9f9; /* Color de fondo más suave */
-    font-size: 14px; /* Tamaño de texto */
-    box-sizing: border-box; /* Asegura que padding esté incluido en el ancho total */
-}
+
 
 input[type="number"]:disabled {
     background-color: #e9e9e9; /* Fondo gris cuando está deshabilitado */
 }
+
+.quantity-controls {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.quantity-button {
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 5px; /* Espaciado */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    font-size: 15px; /* Tamaño de fuente */
+}
+
+.quantity-button:hover {
+    background-color: #0056b3; /* Color al pasar el mouse */
+}
+
+input[type="number"] {
+    width: 50px; /* Ancho del input */
+    text-align: center; /* Centrar texto */
+    margin: 0 5px; /* Espacio lateral */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 5px; /* Espaciado interno */
+}
+

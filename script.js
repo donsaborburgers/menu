@@ -46,8 +46,8 @@ function addItem1(item, precio, cantidad) {
     mostrarNotificacion();
     finalizarPedidoBtn.classList.remove('hidden');
 
-    // Resetear la cantidad del ítem a 1 después de confirmar el pedido
-    document.getElementById('cantidad-clasica').value = 1;
+     // Resetear las cantidades a 1
+    resetCantidadInputs();
 }
 
 
@@ -58,7 +58,7 @@ function actualizarPedido() {
 
     pedido.forEach((articulo) => {
         const p = document.createElement('p');
-        p.innerText = `${articulo.cantidad}x ${articulo.item} - Gs${(articulo.precio).toFixed(0)}`;
+        p.innerText = `${articulo.cantidad}x ${articulo.item} - Gs ${(articulo.precio).toFixed(0)}`;
         pedidoDiv.appendChild(p);
     });
 }
@@ -84,27 +84,27 @@ function confirmarPedido() {
 
     // Añadir extras al subtotal
     if (cantidadExtraCarne > 0) {
-        extrasTexto.push(`Extra Carne x${cantidadExtraCarne}`);
+        extrasTexto.push(`${cantidadExtraCarne}x Extra Carne`);
         subtotal += 5000 * cantidadExtraCarne;
     }
     if (cantidadExtraCheddar > 0) {
-        extrasTexto.push(`Extra Cheddar x${cantidadExtraCheddar}`);
+        extrasTexto.push(`${cantidadExtraCheddar}x Extra Cheddar x`);
         subtotal += 2000 * cantidadExtraCheddar;
     }
     if (cantidadExtraBacon > 0) {
-        extrasTexto.push(`Extra Bacon x${cantidadExtraBacon}`);
+        extrasTexto.push(`${cantidadExtraBacon}x Extra Bacon`);
         subtotal += 3000 * cantidadExtraBacon;
     }
     if (cantidadExtraHuevo > 0) {
-        extrasTexto.push(`Extra Huevo Frito x${cantidadExtraHuevo}`);
+        extrasTexto.push(`${cantidadExtraHuevo}x Extra Huevo Frito`);
         subtotal += 4000 * cantidadExtraHuevo;
     }
     if (cantidadExtraLechuga > 0) {
-        extrasTexto.push(`Extra Lechuga x${cantidadExtraLechuga}`);
+        extrasTexto.push(`${cantidadExtraLechuga}x Extra Lechuga`);
         subtotal += 2000 * cantidadExtraLechuga;
     }
     if (cantidadExtraTomate > 0) {
-        extrasTexto.push(`Extra Tomate x${cantidadExtraTomate}`);
+        extrasTexto.push(`${cantidadExtraTomate}x Extra Tomate`);
         subtotal += 1000 * cantidadExtraTomate;
     }
     if (document.getElementById('otrosExtras').value) {
@@ -130,9 +130,9 @@ function confirmarPedido() {
     mostrarNotificacion();
     finalizarPedidoBtn.classList.remove('hidden');
 
-    // Resetear la cantidad de las hamburguesas a 1 después de confirmar el pedido
-    document.getElementById('cantidad-clasica').value = 1;
-    document.getElementById('cantidad-bacon').value = 1;
+
+    // Resetear las cantidades a 1
+    resetCantidadInputs();
 
     cerrarModal();
 }
@@ -204,11 +204,11 @@ function enviarPedido() {
         return;
     }
 
-    let mensaje = 'Tu pedido:\n';
+    let mensaje = 'Hola Don Sabor, mi pedido desde la web es:\n';
     pedido.forEach(articulo => {
-        mensaje += `${articulo.cantidad}x ${articulo.item} - Gs${articulo.precio.toFixed(0)}\n`;
+        mensaje += `${articulo.cantidad}x ${articulo.item} - Gs ${articulo.precio.toFixed(0)}\n\n`;
     });
-    mensaje += `Total: Gs${total.toFixed(0)}`;
+    mensaje += `Total: Gs ${total.toFixed(0)}`;
 
 
 const telefono = '595973547459'; // Sustituye XXXXXXXXX por tu número de teléfono (sin el símbolo + ni espacios)
@@ -267,7 +267,7 @@ function verResumenPedido() {
 
     // Mostrar el total en el resumen
     const totalResumen = document.getElementById('totalResumen');
-    totalResumen.innerText = `Total: Gs${total.toFixed(0)}`;
+    totalResumen.innerText = `Total: Gs ${total.toFixed(0)}`;
 
     // Mostrar el modal
     document.getElementById('resumenModal').classList.remove('hidden');
@@ -283,5 +283,30 @@ function cerrarResumenModal() {
 window.addEventListener('beforeunload', function() {
     window.scrollTo(0, 0); // Desplazar a la parte superior
 });
+
+
+function cambiarCantidad(inputId, cambio) {
+    const input = document.getElementById(inputId);
+    let cantidadActual = parseInt(input.value);
+
+    // Cambiar la cantidad según el botón presionado
+    cantidadActual += cambio;
+
+    // Asegurarse de que no sea menor que 1
+    if (cantidadActual < 1) {
+        cantidadActual = 1;
+    }
+
+    // Actualizar el valor del input
+    input.value = cantidadActual;
+}
+
+// Función para resetear los inputs de cantidad
+function resetCantidadInputs() {
+    const inputsCantidad = document.querySelectorAll('.quantity-controls input[type="number"]');
+    inputsCantidad.forEach(input => {
+        input.value = 1; // Resetear cada input a 1
+    });
+}
 
 
