@@ -54,18 +54,6 @@ input[type="checkbox"] {
     display: block;
 }
 
-/* Diseño responsivo para pantallas pequeñas */
-@media (max-width: 768px) {
-    .tab {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .tab button {
-        width: 100%; /* Botones ocupan el ancho completo en pantallas pequeñas */
-    }
-}
-
 
 
 /* Contenedor que agrupa la información de productos y el botón de finalizar */
