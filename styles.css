@@ -12,6 +12,44 @@ input[type="checkbox"] {
     display: none; /* Ocultar el checkbox original */
 }
 
+
+/* Estilos para las pestañas */
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+
 /* Contenedor que agrupa la información de productos y el botón de finalizar */
 .checkout-container {
     display: flex;
