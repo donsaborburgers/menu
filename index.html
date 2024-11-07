@@ -9,7 +9,7 @@
 <body>
 
     <div class="container">
-        <h1>Menú de Don Sabor Burgers</h1>
+        <h1>Menú de Don Sabor</h1>
         <a href="#top" id="top"></a> <!-- Ancla para volver al inicio -->
 
         <!-- Navegación de pestañas -->
@@ -30,7 +30,7 @@
                 <div class="item">
                     <img src="imagenes/doriburger.png" alt="Hamburguesa Homenaje">
                     <div class="item-details">
-                        <h2>DoriBurger (Homenaje del mes)</h2>
+                        <h2 class='nombre'>DoriBurger (Homenaje del mes)</h2>
                         <p>Pan classic, doble ultra smash (70g cada), doble cheddar, bacon crujiente, doritos sabor queso, cebolla en cubos, ketchup.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-homenaje">22000</span></p>
@@ -49,15 +49,15 @@
 
 
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('DoriBurger', 22000, document.getElementById('cantidad-homenaje').value)">Pedir</button>
-                            <button class="add-button1" onclick="addItem('DoriBurger Combo', 32000, document.getElementById('cantidad-homenaje').value)">Pedir Combo</button>
+                            <button class="add-button" onclick="addItem('DoriBurger', 22000, document.getElementById('cantidad-homenaje').value)">Añadir</button>
+                            <button class="add-button1" onclick="addItem('DoriBurger Combo', 32000, document.getElementById('cantidad-homenaje').value)">Añadir Combo</button>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <img src="imagenes/classic.png" alt="Hamburguesa Clásica">
                     <div class="item-details">
-                        <h2>Classic</h2>
+                        <h2 class='nombre'>Classic</h2>
                         <p>Pan classic, doble ultra smash (70g cada), doble cheddar, tomate en fetas, lechuga repollada, mayo ajo.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-clasica">20000</span></p>
@@ -76,8 +76,8 @@
 
 
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Pedir</button>
-                            <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Pedir Combo</button>
+                            <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Añadir</button>
+                            <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Añadir Combo</button>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="item">
                     <img src="imagenes/bacon.png" alt="Hamburguesa Bacon">
                     <div class="item-details">
-                        <h2>Bacon</h2>
+                        <h2 class='nombre'>Bacon</h2>
                         <p>Pan classic, doble ultra smash (70g cada), doble cheddar, bacon crujiente, mayo ajo.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-bacon">20000</span></p>
@@ -102,8 +102,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Bacon Burger', 20000, document.getElementById('cantidad-bacon').value)">Pedir</button>
-                            <button class="add-button1" onclick="addItem('Bacon Burger Combo', 30000, document.getElementById('cantidad-bacon').value)">Pedir Combo</button>
+                            <button class="add-button" onclick="addItem('Bacon Burger', 20000, document.getElementById('cantidad-bacon').value)">Añadir</button>
+                            <button class="add-button1" onclick="addItem('Bacon Burger Combo', 30000, document.getElementById('cantidad-bacon').value)">Añadir Combo</button>
                         </div>
 
 
@@ -113,7 +113,7 @@
                 <div class="item">
                     <img src="imagenes/fried.png" alt="Hamburguesa Fried Onion">
                     <div class="item-details">
-                        <h2>Fried Onion (Oklahoma)</h2>
+                        <h2 class='nombre'>Fried Onion (Oklahoma)</h2>
                         <p>Pan classic, doble ultra smash (70g cada), doble cheddar, cebolla smashada con la carne, mayo ajo.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-fried">20000</span></p>
@@ -130,8 +130,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Fried Onion Burger', 20000, document.getElementById('cantidad-fried').value)">Pedir</button>
-                            <button class="add-button1" onclick="addItem('Fried Onion Burger Combo', 30000, document.getElementById('cantidad-fried').value)">Pedir Combo</button>
+                            <button class="add-button" onclick="addItem('Fried Onion Burger', 20000, document.getElementById('cantidad-fried').value)">Añadir</button>
+                            <button class="add-button1" onclick="addItem('Fried Onion Burger Combo', 30000, document.getElementById('cantidad-fried').value)">Añadir Combo</button>
                         </div>
 
 
@@ -141,7 +141,7 @@
                 <div class="item">
                     <img src="imagenes/libra.png" alt="Hamburguesa Libra">
                     <div class="item-details">
-                        <h2>Cuarto de Libra (Homenaje)</h2>
+                        <h2 class='nombre'>Cuarto de Libra (Homenaje)</h2>
                         <p>Pan classic con semilla, doble ultra smash (70g cada), doble cheddar, cebolla en cubos, pepinillos en rodajas, ketchup y mostaza.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-libra">20000</span></p>
@@ -158,8 +158,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Libra Burger', 20000, document.getElementById('cantidad-libra').value)">Pedir</button>
-                            <button class="add-button1" onclick="addItem('Libra Burger Combo', 30000, document.getElementById('cantidad-libra').value)">Pedir Combo</button>
+                            <button class="add-button" onclick="addItem('Libra Burger', 20000, document.getElementById('cantidad-libra').value)">Añadir</button>
+                            <button class="add-button1" onclick="addItem('Libra Burger Combo', 30000, document.getElementById('cantidad-libra').value)">Añadir Combo</button>
                         </div>
 
 
@@ -169,7 +169,7 @@
                 <div class="item">
                     <img src="imagenes/american.png" alt="Hamburguesa American">
                     <div class="item-details">
-                        <h2>American</h2>
+                        <h2 class='nombre'>American</h2>
                         <p>Pan classic, doble ultra smash (70g cada), doble cheddar, bacon crujiente, huevo frito, mayo ajo.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-american">24000</span></p>
@@ -186,8 +186,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('American Burger', 24000, document.getElementById('cantidad-american').value)">Pedir</button>
-                            <button class="add-button1" onclick="addItem('American Burger Combo', 34000, document.getElementById('cantidad-american').value)">Pedir Combo</button>
+                            <button class="add-button" onclick="addItem('American Burger', 24000, document.getElementById('cantidad-american').value)">Añadir</button>
+                            <button class="add-button1" onclick="addItem('American Burger Combo', 34000, document.getElementById('cantidad-american').value)">Añadir Combo</button>
                         </div>
 
 
@@ -197,7 +197,7 @@
                 <div class="item">
                     <img src="imagenes/kids.png" alt="Hamburguesa Kids">
                     <div class="item-details">
-                        <h2>Kids</h2>
+                        <h2 class='nombre'>Kids</h2>
                         <p>Pan classic, ultra smash (70g), doble cheddar, mayo ajo.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-kids">15000</span></p>
@@ -214,8 +214,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Kids Burger', 15000, document.getElementById('cantidad-kids').value)">Pedir</button>
-                            <button class="add-button1" onclick="addItem('Kids Burger Combo', 25000, document.getElementById('cantidad-kids').value)">Pedir Combo</button>
+                            <button class="add-button" onclick="addItem('Kids Burger', 15000, document.getElementById('cantidad-kids').value)">Añadir</button>
+                            <button class="add-button1" onclick="addItem('Kids Burger Combo', 25000, document.getElementById('cantidad-kids').value)">Añadir Combo</button>
                         </div>
 
 
@@ -225,7 +225,7 @@
                 <div class="item">
                     <img src="imagenes/cajanuggets.png" alt="Caja Nuggets">
                     <div class="item-details">
-                        <h2>Caja de Burgers con Nuggets</h2>
+                        <h2 class='nombre'>Caja de Burgers con Nuggets</h2>
                         <p>4 burgers sliders (tamaño más pequeño) acompañado de 12 unidades de nuggets de pollo. Acompaña ketchup y mayo en sachet.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-cajanuggets">60000</span></p>
@@ -240,7 +240,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Caja Nuggets', 60000, document.getElementById('cantidad-cajanuggets').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem('Caja Nuggets', 60000, document.getElementById('cantidad-cajanuggets').value)">Añadir</button>
                         </div>
 
 
@@ -250,7 +250,7 @@
                 <div class="item">
                     <img src="imagenes/cajapapas.png" alt="Caja Papas Fritas">
                     <div class="item-details">
-                        <h2>Caja de Burgers con Papas Fritas</h2>
+                        <h2 class='nombre'>Caja de Burgers con Papas Fritas</h2>
                         <p>4 burgers sliders (tamaño más pequeño) acompañado de porciones de papas fritas. Acompaña ketchup y mayo en sachet.</p>
                         <p class='price'>Precio Gs <span class="precio" id="precio-cajapapas">60000</span></p>
 
@@ -264,7 +264,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Caja de Papas', 60000, document.getElementById('cantidad-cajapapas').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem('Caja de Papas', 60000, document.getElementById('cantidad-cajapapas').value)">Añadir</button>
                         </div>
 
 
@@ -283,7 +283,7 @@
                 <div class="item">
                     <img src="imagenes/fries.png" alt="Papas Fritas">
                     <div class="item-details">
-                        <h2>Papas Fritas</h2>
+                        <h2 class='nombre'>Papas Fritas</h2>
                         <p>Porción de entre 90g a 100g de papas fritas crujientes cocidas en aceite de girasol, acompaña un sachet de ketchup.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-fritas">7000</span></p>
@@ -298,7 +298,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Papas Fritas', 7000, document.getElementById('cantidad-fritas').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Papas Fritas', 7000, document.getElementById('cantidad-fritas').value)">Añadir</button>
                         </div>
 
 
@@ -308,7 +308,7 @@
                 <div class="item">
                     <img src="imagenes/nuggets2.png" alt="Nuggets de Pollo">
                     <div class="item-details">
-                        <h2>Nuggets de Pollo</h2>
+                        <h2 class='nombre'>Nuggets de Pollo</h2>
                         <p>Seis unidades de nuggets de pollo, acompaña un pote de salsa barbacoa de 30ml.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-nuggets">10000</span></p>
@@ -323,7 +323,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Nuggets de Pollo', 10000, document.getElementById('cantidad-nuggets').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Nuggets de Pollo', 10000, document.getElementById('cantidad-nuggets').value)">Añadir</button>
                         </div>
 
 
@@ -333,7 +333,7 @@
                 <div class="item">
                     <img src="imagenes/coca1.png" alt="Coca Cola 310ml">
                     <div class="item-details">
-                        <h2>Coca Cola 310ml</h2>
+                        <h2 class='nombre'>Coca Cola 310ml</h2>
                         <p>Bebida gasificada sabor cola en lata de 310ml.</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-coca310">6000</span></p>
@@ -348,7 +348,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Coca Cola 310ml', 6000, document.getElementById('cantidad-coca310').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Coca Cola 310ml', 6000, document.getElementById('cantidad-coca310').value)">Añadir</button>
                         </div>
 
                     </div>
@@ -365,7 +365,7 @@
                 <div class="item">
                     <img src="imagenes/lomisimple.png" alt="Lomito Simple">
                     <div class="item-details">
-                        <h2>Lomi Simple</h2>
+                        <h2 class='nombre'>Lomi Simple</h2>
 
                         <p>Pan pebete con semilla, lomo vacuno, doble queso muzarella, tomate en fetas, lechuga repollada, mayo de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -381,7 +381,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItemLomi('Lomito Simple', 22000, document.getElementById('cantidad-lomisimple').value)">Pedir</button>
+                            <button class="add-button" onclick="addItemLomi('Lomito Simple', 22000, document.getElementById('cantidad-lomisimple').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -389,7 +389,7 @@
                 <div class="item">
                     <img src="imagenes/lomibacon.png" alt="Lomi Bacon">
                     <div class="item-details">
-                        <h2>Lomi Bacon</h2>
+                        <h2 class='nombre'>Lomi Bacon</h2>
 
                         <p>Pan pebete con semilla, lomo vacuno, doble queso muzarella, bacon crujiente, cebolla en cubos, pepinillos en rodajas, ketchup. Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -405,7 +405,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItemLomi('Lomito Bacon', 24000, document.getElementById('cantidad-lomibacon').value)">Pedir</button>
+                            <button class="add-button" onclick="addItemLomi('Lomito Bacon', 24000, document.getElementById('cantidad-lomibacon').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -414,7 +414,7 @@
                 <div class="item">
                     <img src="imagenes/lomicompleto.png" alt="Lomito Completo">
                     <div class="item-details">
-                        <h2>Lomi Completo</h2>
+                        <h2 class='nombre'>Lomi Completo</h2>
 
                         <p>Pan pebete con semilla, lomo vacuno, doble queso muzarella, tomate en fetas, lechuga repollada, huevo frito, mayo de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -430,7 +430,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItemLomi('Lomito Completo', 25000, document.getElementById('cantidad-lomicompleto').value)">Pedir</button>
+                            <button class="add-button" onclick="addItemLomi('Lomito Completo', 25000, document.getElementById('cantidad-lomicompleto').value)">Añadir</button>
                         </div>
 
 
@@ -446,7 +446,7 @@
                 <div class="item">
                     <img src="imagenes/arabesimple.png" alt="Árabe Simple Pollo">
                     <div class="item-details">
-                        <h2>Lomi Árabe Pollo</h2>
+                        <h2 class='nombre'>Lomi Árabe Pollo</h2>
 
                         <p>Pan árabe, repollo rallado, tomate en cubos, carne pollo, salsa de ajo verde (ajo y perejil suave). Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -462,7 +462,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Árabe Simple Pollo', 20000, document.getElementById('cantidad-arabepollo').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Árabe Simple Pollo', 20000, document.getElementById('cantidad-arabepollo').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -470,7 +470,7 @@
                 <div class="item">
                     <img src="imagenes/arabesimple.png" alt="Árabe Simple Vacuno">
                     <div class="item-details">
-                        <h2>Lomi Árabe Vacuno</h2>
+                        <h2 class='nombre'>Lomi Árabe Vacuno</h2>
 
                         <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna, salsa de ajo verde (ajo y perejil suave). Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -486,7 +486,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Árabe Simple Vacuno', 24000, document.getElementById('cantidad-arabevacuno').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Árabe Simple Vacuno', 24000, document.getElementById('cantidad-arabevacuno').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -494,7 +494,7 @@
                 <div class="item">
                     <img src="imagenes/arabesimple.png" alt="Árabe Simple Mixto">
                     <div class="item-details">
-                        <h2>Lomi Árabe Mixto</h2>
+                        <h2 class='nombre'>Lomi Árabe Mixto</h2>
 
                         <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, salsa de ajo verde (ajo y perejil suave). Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -510,7 +510,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Árabe Simple Mixto', 22000, document.getElementById('cantidad-arabemixto').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Árabe Simple Mixto', 22000, document.getElementById('cantidad-arabemixto').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -518,7 +518,7 @@
                 <div class="item">
                     <img src="imagenes/arabecompleto.png" alt="Árabe Completo Mixto">
                     <div class="item-details">
-                        <h2>Lomi Árabe Completo Mixto</h2>
+                        <h2 class='nombre'>Lomi Árabe Completo Mixto</h2>
 
                         <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, queso muzarella, huevo frito, salsa de ajo verde (ajo y perejil suave). Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -534,7 +534,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Árabe Completo Mixto', 25000, document.getElementById('cantidad-arabecompletomixto').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Árabe Completo Mixto', 25000, document.getElementById('cantidad-arabecompletomixto').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -542,7 +542,7 @@
                 <div class="item">
                     <img src="imagenes/arabecompleto.png" alt="Árabe Completo Pollo">
                     <div class="item-details">
-                        <h2>Lomi Árabe Completo Pollo</h2>
+                        <h2 class='nombre'>Lomi Árabe Completo Pollo</h2>
 
                         <p>Pan árabe, repollo rallado, tomate en cubos, carne de pollo, queso muzarella, huevo frito salsa de ajo verde (ajo y perejil suave). Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -558,7 +558,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Árabe Completo Pollo', 23000, document.getElementById('cantidad-arabecompletopollo').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Árabe Completo Pollo', 23000, document.getElementById('cantidad-arabecompletopollo').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -566,7 +566,7 @@
                 <div class="item">
                     <img src="imagenes/arabesimple.png" alt="Árabe Completo Vacuno">
                     <div class="item-details">
-                        <h2>Lomi Árabe Completo Vacuno</h2>
+                        <h2 class='nombre'>Lomi Árabe Completo Vacuno</h2>
 
                         <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, salsa de ajo verde (ajo y perejil suave). Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -582,7 +582,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Árabe Completo Vacuno', 27000, document.getElementById('cantidad-arabecompletovacuno').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Árabe Completo Vacuno', 27000, document.getElementById('cantidad-arabecompletovacuno').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -590,7 +590,7 @@
                 <div class="item">
                     <img src="imagenes/shawarma.png" alt="Shawarma Mixto">
                     <div class="item-details">
-                        <h2>Shawarma Mixto</h2>
+                        <h2 class='nombre'>Shawarma Mixto</h2>
 
                         <p>Pan árabe, papas fritas, lechuga rallada, tomate en cubos, cebolla morada en julianas, carne vacuna y de pollo, salsa de ajo verde (ajo y perejil suave). Acompaña un pote de salsa de ajo de 30ml.</p>
 
@@ -606,7 +606,7 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem1('Shawarma Mixto', 26000, document.getElementById('cantidad-shawarmamixto').value)">Pedir</button>
+                            <button class="add-button" onclick="addItem1('Shawarma Mixto', 26000, document.getElementById('cantidad-shawarmamixto').value)">Añadir</button>
                         </div>
                     </div>
                 </div>
