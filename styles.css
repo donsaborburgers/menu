@@ -55,7 +55,6 @@ input[type="checkbox"] {
 }
 
 
-
 /* Contenedor que agrupa la información de productos y el botón de finalizar */
 .checkout-container {
     display: flex;
@@ -70,7 +69,7 @@ input[type="checkbox"] {
     background-color: white;
     padding: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 /* Información de cantidad de productos y total */
@@ -87,7 +86,6 @@ input[type="checkbox"] {
     font-size: 16px;
     text-align: center;
 }
-
 
 
 .container {
@@ -112,23 +110,27 @@ h1 {
 
 .item {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
-    padding: 15px;
+    padding: 5px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 1px;
     background-color: #fafafa;
 }
 
 .item img {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .nombre{
     font-size: 17px;
+}
+
+.descrip {
+    font-size: 8px;
 }
 
 .item-details {
@@ -149,6 +151,7 @@ p {
 .combo_descripcion {
     margin: 0px 0;
     color: #650;
+    font-size: 8px;
 }
 
 
@@ -169,6 +172,7 @@ p {
     text-align: center;
     margin: 0 5px; /* Espacio entre botones */
     transition: background-color 0.3s ease;
+    font-size: 17px;
 }
 
 .add-button:hover {
@@ -187,6 +191,7 @@ p {
     text-align: center;
     margin: 0 5px; /* Espacio entre botones */
     transition: background-color 0.3s ease;
+    font-size: 13px;
 
 }
 
@@ -295,7 +300,7 @@ p {
 
 .precio {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 12px;
 
 }
 
