@@ -119,8 +119,8 @@ h1 {
 }
 
 .item img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 2px;
 }
@@ -129,13 +129,10 @@ h1 {
     font-size: 17px;
 }
 
-.descrip {
-    font-size: 8px;
-}
 
 .item-details {
     flex-grow: 1;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 h2 {
@@ -151,7 +148,7 @@ p {
 .combo_descripcion {
     margin: 0px 0;
     color: #650;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 
@@ -301,12 +298,14 @@ p {
 .precio {
     font-weight: bold;
     font-size: 12px;
+    color:black;
 
 }
 
 .price {
     font-weight: bold;
     font-size: 12px;
+    color: black;
 
 }
 
