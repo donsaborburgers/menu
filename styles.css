@@ -8,6 +8,8 @@ body {
     background-position: center;
 }
 
+
+
 input[type="checkbox"] {
     display: none; /* Ocultar el checkbox original */
 }
@@ -96,6 +98,30 @@ input[type="checkbox"] {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
+
+#otrosExtras {
+    width: 100%; /* Se ajusta al ancho disponible */
+    max-width: 300px; /* Limita el ancho máximo */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+    background-color: #f9f9f9; /* Color de fondo suave */
+    border: 2px solid #007bff; /* Borde con color */
+    border-radius: 8px; /* Bordes redondeados */
+    outline: none; /* Sin borde de enfoque azul predeterminado */
+    transition: border-color 0.3s ease; /* Suaviza el cambio de color del borde */
+}
+
+#otrosExtras:focus {
+    border-color: #0056b3; /* Color de borde cuando está en foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave al enfoque */
+}
+
+#otrosExtras::placeholder {
+    color: #aaa; /* Color del texto del placeholder */
+    font-style: italic; /* Estilo cursiva */
+}
+
 
 h1 {
     text-align: center;
@@ -331,6 +357,12 @@ p {
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
+}
+
+.ad-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .close {

@@ -31,7 +31,7 @@
                     <img src="imagenes/doriburger.png" alt="Hamburguesa Homenaje">
                     <div class="item-details">
                         <h2 class='nombre'>DoriBurger</h2>
-                        <h4 >Homenaje del mes</h4>
+                        <h4 >Especial del mes</h4>
                         <p class="descrip">Pan classic, doble ultra smash (70g cada), doble cheddar, bacon crujiente, doritos sabor queso, cebolla en cubos, ketchup.</p>
                         <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
 
@@ -64,7 +64,7 @@
                         <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-clasica">20000</span></p>
-                       
+
 
                         <p class='price'>Precio en Combo Gs <span class="precio" id="precio-clasica-combo">30000</span> </p>
 
@@ -179,7 +179,7 @@
                         <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-american">24000</span></p>
-                      
+
 
                         <p class='price'>Precio en Combo Gs <span class="precio" id="precio-american-combo">34000</span> </p>
 
@@ -208,7 +208,7 @@
                         <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-kids">15000</span></p>
-                       
+
 
                         <p class='price'>Precio en Combo Gs <span class="precio" id="precio-kids-combo">25000</span> </p>
 
@@ -777,6 +777,25 @@
         <button onclick="cerrarResumenModal()">Cerrar</button>
     </div>
 </div>
+
+
+<!-- Modal para promos -->
+<div id="promoModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModalPromo()">&times;</span>
+        <p>¡Felicidades! Por tu compra te ganaste una Coca Cola de 1L gratis.</p>
+    </div>
+</div>
+
+
+<!-- Modal para notificacion al inicio -->
+<div id="adModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModalPubli()">&times;</span>
+        <img src="imagenes/promo-albirro01.png" alt="Publicidad" class="ad-image">
+    </div>
+</div>
+
 
 
 
