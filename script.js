@@ -1,1 +1,501 @@
-const _0x4ea06e=_0xaac6;(function(_0x1ea0de,_0xb6468e){const _0x46ceb0=_0xaac6,_0x4769a6=_0x1ea0de();while(!![]){try{const _0x3cd474=parseInt(_0x46ceb0(0xae))/0x1+parseInt(_0x46ceb0(0xa2))/0x2+-parseInt(_0x46ceb0(0x8d))/0x3+parseInt(_0x46ceb0(0xb4))/0x4*(-parseInt(_0x46ceb0(0x73))/0x5)+-parseInt(_0x46ceb0(0xca))/0x6*(parseInt(_0x46ceb0(0x86))/0x7)+-parseInt(_0x46ceb0(0x91))/0x8*(-parseInt(_0x46ceb0(0xd3))/0x9)+parseInt(_0x46ceb0(0xc7))/0xa*(parseInt(_0x46ceb0(0xac))/0xb);if(_0x3cd474===_0xb6468e)break;else _0x4769a6['push'](_0x4769a6['shift']());}catch(_0x6c91b3){_0x4769a6['push'](_0x4769a6['shift']());}}}(_0x51ac,0x965b1));let pedido=[],total=0x0,precioActual=0x0,cantidadActual=0x0,itemActual='';function addItem(_0x4230c3,_0x1ce9b4,_0x4a3e9b){const _0x8394d9=_0xaac6,_0x69c8b2=parseFloat(_0x1ce9b4),_0x2e4db9=parseInt(_0x4a3e9b);document[_0x8394d9(0x81)](_0x8394d9(0x90))[_0x8394d9(0xc3)](_0x8394d9(0x78),_0x4230c3),document[_0x8394d9(0x81)](_0x8394d9(0x90))[_0x8394d9(0xc3)](_0x8394d9(0xba),_0x69c8b2),document['getElementById'](_0x8394d9(0x90))[_0x8394d9(0xc3)](_0x8394d9(0xbb),_0x2e4db9),document[_0x8394d9(0x81)](_0x8394d9(0x90))[_0x8394d9(0xbf)][_0x8394d9(0x8b)](_0x8394d9(0x98));}function addItemLomi(_0x10eb31,_0x171665,_0x945c88){const _0x53e33c=_0xaac6,_0x4e43ab=parseFloat(_0x171665),_0x491009=parseInt(_0x945c88);document[_0x53e33c(0x81)]('extrasModalLomi')[_0x53e33c(0xc3)](_0x53e33c(0x78),_0x10eb31),document[_0x53e33c(0x81)](_0x53e33c(0x99))[_0x53e33c(0xc3)](_0x53e33c(0xba),_0x4e43ab),document[_0x53e33c(0x81)](_0x53e33c(0x99))[_0x53e33c(0xc3)](_0x53e33c(0xbb),_0x491009),document[_0x53e33c(0x81)](_0x53e33c(0x99))[_0x53e33c(0xbf)][_0x53e33c(0x8b)](_0x53e33c(0x98));}function addItem1(_0x15311c,_0x7a8ffa,_0xde3ca9){const _0x38b23c=_0xaac6,_0x1e5dbe=parseFloat(_0x7a8ffa),_0x10b8b7=parseInt(_0xde3ca9),_0x546b6b=_0x1e5dbe*_0x10b8b7;pedido[_0x38b23c(0x8e)]({'item':_0x15311c,'cantidad':_0x10b8b7,'precio':_0x546b6b}),actualizarPedido(),total+=_0x546b6b,document[_0x38b23c(0x81)](_0x38b23c(0xb0))[_0x38b23c(0xa5)]=total[_0x38b23c(0x83)](0x0);const _0x3416fb=document[_0x38b23c(0x81)](_0x38b23c(0xd0));_0x3416fb[_0x38b23c(0xa5)]=_0x38b23c(0xa0)+total[_0x38b23c(0x83)](0x0)+')',mostrarNotificacion(),_0x3416fb[_0x38b23c(0xbf)][_0x38b23c(0x8b)](_0x38b23c(0x98)),resetCantidadInputs();}function actualizarPedido(){const _0x388de1=_0xaac6,_0x2ebdd3=document[_0x388de1(0x81)](_0x388de1(0xb5));_0x2ebdd3[_0x388de1(0x71)]='',pedido[_0x388de1(0xc4)](_0x12ef58=>{const _0x1b539c=_0x388de1,_0x2f32fe=document[_0x1b539c(0xa6)]('p');_0x2f32fe[_0x1b539c(0xa5)]=_0x12ef58[_0x1b539c(0xb2)]+'x\x20'+_0x12ef58['item']+'\x20-\x20Gs\x20'+_0x12ef58[_0x1b539c(0xcd)][_0x1b539c(0x83)](0x0),_0x2ebdd3[_0x1b539c(0x8a)](_0x2f32fe);});}function confirmarPedido(){const _0x24eb52=_0xaac6,_0x27d98e=document[_0x24eb52(0x81)](_0x24eb52(0x90))[_0x24eb52(0xa7)](_0x24eb52(0x78)),_0x3a1da1=parseFloat(document[_0x24eb52(0x81)](_0x24eb52(0x90))[_0x24eb52(0xa7)](_0x24eb52(0xba))),_0x9d3bbd=parseInt(document[_0x24eb52(0x81)](_0x24eb52(0x90))['getAttribute'](_0x24eb52(0xbb))),_0x74e248=parseInt(document['getElementById'](_0x24eb52(0xbc))[_0x24eb52(0x9a)])||0x0,_0x3e07e5=parseInt(document[_0x24eb52(0x81)]('cantidadExtraCheddar')['value'])||0x0,_0x1b3002=parseInt(document[_0x24eb52(0x81)](_0x24eb52(0x79))[_0x24eb52(0x9a)])||0x0,_0x2b7608=parseInt(document[_0x24eb52(0x81)](_0x24eb52(0x8c))['value'])||0x0,_0x3dbc8a=parseInt(document['getElementById'](_0x24eb52(0x7e))[_0x24eb52(0x9a)])||0x0,_0x35e26b=parseInt(document[_0x24eb52(0x81)](_0x24eb52(0xa8))[_0x24eb52(0x9a)])||0x0;let _0x1e9489=[],_0xa73605=_0x3a1da1*_0x9d3bbd;_0x74e248>0x0&&(_0x1e9489[_0x24eb52(0x8e)](_0x74e248+_0x24eb52(0x88)),_0xa73605+=0x1388*_0x74e248);_0x3e07e5>0x0&&(_0x1e9489[_0x24eb52(0x8e)](_0x3e07e5+_0x24eb52(0xb6)),_0xa73605+=0x7d0*_0x3e07e5);_0x1b3002>0x0&&(_0x1e9489[_0x24eb52(0x8e)](_0x1b3002+_0x24eb52(0x70)),_0xa73605+=0xbb8*_0x1b3002);_0x2b7608>0x0&&(_0x1e9489[_0x24eb52(0x8e)](_0x2b7608+_0x24eb52(0x95)),_0xa73605+=0xfa0*_0x2b7608);_0x3dbc8a>0x0&&(_0x1e9489[_0x24eb52(0x8e)](_0x3dbc8a+_0x24eb52(0x7b)),_0xa73605+=0x7d0*_0x3dbc8a);_0x35e26b>0x0&&(_0x1e9489['push'](_0x35e26b+'x\x20Extra\x20Tomate'),_0xa73605+=0x3e8*_0x35e26b);document[_0x24eb52(0x81)]('otrosExtras')[_0x24eb52(0x9a)]&&_0x1e9489['push'](document[_0x24eb52(0x81)]('otrosExtras')[_0x24eb52(0x9a)]);const _0x52c896=_0x1e9489['length']>0x0?_0x24eb52(0x92)+_0x1e9489[_0x24eb52(0xaf)](',\x20')+')':'';pedido[_0x24eb52(0x8e)]({'item':_0x27d98e+_0x52c896,'cantidad':_0x9d3bbd,'precio':_0xa73605}),actualizarPedido(),total+=_0xa73605,document['getElementById'](_0x24eb52(0xb0))[_0x24eb52(0xa5)]=total[_0x24eb52(0x83)](0x0);const _0x277767=document['getElementById'](_0x24eb52(0xd0));_0x277767[_0x24eb52(0xa5)]=_0x24eb52(0xa0)+total['toFixed'](0x0)+')',mostrarNotificacion(),_0x277767[_0x24eb52(0xbf)][_0x24eb52(0x8b)](_0x24eb52(0x98)),resetCantidadInputs(),cerrarModal();}function confirmarPedido1(){const _0x5f563a=_0xaac6,_0x20a573=document[_0x5f563a(0x81)](_0x5f563a(0x99))[_0x5f563a(0xa7)]('data-item'),_0x251f58=parseFloat(document['getElementById'](_0x5f563a(0x99))[_0x5f563a(0xa7)](_0x5f563a(0xba))),_0x406bd9=parseInt(document['getElementById'](_0x5f563a(0x99))[_0x5f563a(0xa7)]('data-cantidad')),_0x52c20e=parseInt(document[_0x5f563a(0x81)](_0x5f563a(0xc5))['value'])||0x0,_0x4e1caa=parseInt(document[_0x5f563a(0x81)](_0x5f563a(0x8f))[_0x5f563a(0x9a)])||0x0,_0x5bd822=parseInt(document['getElementById']('cantidadExtraBacon1')[_0x5f563a(0x9a)])||0x0,_0x1b8725=parseInt(document[_0x5f563a(0x81)](_0x5f563a(0x9f))[_0x5f563a(0x9a)])||0x0,_0x76913b=parseInt(document['getElementById'](_0x5f563a(0x7a))[_0x5f563a(0x9a)])||0x0,_0x3edc3a=parseInt(document['getElementById'](_0x5f563a(0xa9))[_0x5f563a(0x9a)])||0x0;let _0x30367e=[],_0x320f17=_0x251f58*_0x406bd9;_0x52c20e>0x0&&(_0x30367e[_0x5f563a(0x8e)](_0x52c20e+_0x5f563a(0xb7)),_0x320f17+=0x1b58*_0x52c20e);_0x4e1caa>0x0&&(_0x30367e[_0x5f563a(0x8e)](_0x4e1caa+_0x5f563a(0xd2)),_0x320f17+=0x7d0*_0x4e1caa);_0x5bd822>0x0&&(_0x30367e[_0x5f563a(0x8e)](_0x5bd822+'x\x20Extra\x20Bacon'),_0x320f17+=0xbb8*_0x5bd822);_0x1b8725>0x0&&(_0x30367e[_0x5f563a(0x8e)](_0x1b8725+_0x5f563a(0x95)),_0x320f17+=0xfa0*_0x1b8725);_0x76913b>0x0&&(_0x30367e['push'](_0x76913b+_0x5f563a(0x7b)),_0x320f17+=0x7d0*_0x76913b);_0x3edc3a>0x0&&(_0x30367e[_0x5f563a(0x8e)](_0x3edc3a+'x\x20Extra\x20Tomate'),_0x320f17+=0x3e8*_0x3edc3a);document[_0x5f563a(0x81)](_0x5f563a(0x7f))[_0x5f563a(0x9a)]&&_0x30367e['push'](document[_0x5f563a(0x81)](_0x5f563a(0x7f))[_0x5f563a(0x9a)]);const _0x498ca3=_0x30367e[_0x5f563a(0x9c)]>0x0?_0x5f563a(0x92)+_0x30367e[_0x5f563a(0xaf)](',\x20')+')':'';pedido[_0x5f563a(0x8e)]({'item':_0x20a573+_0x498ca3,'cantidad':_0x406bd9,'precio':_0x320f17}),actualizarPedido(),total+=_0x320f17,document['getElementById'](_0x5f563a(0xb0))[_0x5f563a(0xa5)]=total['toFixed'](0x0);const _0x1ccc5a=document[_0x5f563a(0x81)]('finalizarPedidoBtn');_0x1ccc5a[_0x5f563a(0xa5)]=_0x5f563a(0xa0)+total[_0x5f563a(0x83)](0x0)+')',mostrarNotificacion(),_0x1ccc5a['classList'][_0x5f563a(0x8b)](_0x5f563a(0x98)),resetCantidadInputs(),cerrarModalLomi();}function _0xaac6(_0x4a5ebb,_0x27d7e3){const _0x51ac9a=_0x51ac();return _0xaac6=function(_0xaac606,_0x2c8dd8){_0xaac606=_0xaac606-0x70;let _0x451eb1=_0x51ac9a[_0xaac606];return _0x451eb1;},_0xaac6(_0x4a5ebb,_0x27d7e3);}function verificarPromo(_0x256eee){const _0x1c9513=_0xaac6;_0x256eee>=0x13880&&(document[_0x1c9513(0x81)](_0x1c9513(0x76))['style']['display']=_0x1c9513(0x89));}function mostrarNotificacion(){const _0x42fac9=_0xaac6,_0x12209e=document[_0x42fac9(0x81)](_0x42fac9(0xc8));_0x12209e[_0x42fac9(0xbf)][_0x42fac9(0x8b)](_0x42fac9(0x98)),_0x12209e[_0x42fac9(0xbf)][_0x42fac9(0x93)](_0x42fac9(0x85)),setTimeout(()=>{const _0x211844=_0x42fac9;_0x12209e[_0x211844(0xbf)]['remove']('show'),_0x12209e[_0x211844(0xbf)]['add']('hidden');},0x7d0);}function cerrarModal(){const _0x2fb98f=_0xaac6;document[_0x2fb98f(0x81)](_0x2fb98f(0x90))[_0x2fb98f(0xbf)][_0x2fb98f(0x93)](_0x2fb98f(0x98)),document[_0x2fb98f(0x81)](_0x2fb98f(0xbc))[_0x2fb98f(0x9a)]=0x0,document[_0x2fb98f(0x81)]('cantidadExtraCheddar')[_0x2fb98f(0x9a)]=0x0,document[_0x2fb98f(0x81)](_0x2fb98f(0x79))[_0x2fb98f(0x9a)]=0x0,document[_0x2fb98f(0x81)](_0x2fb98f(0x8c))['value']=0x0,document['getElementById'](_0x2fb98f(0x7e))[_0x2fb98f(0x9a)]=0x0,document[_0x2fb98f(0x81)]('cantidadExtraTomate')[_0x2fb98f(0x9a)]=0x0,document['getElementById'](_0x2fb98f(0x9d))[_0x2fb98f(0xc1)]=![],document[_0x2fb98f(0x81)](_0x2fb98f(0x77))[_0x2fb98f(0xc1)]=![],document[_0x2fb98f(0x81)](_0x2fb98f(0x9e))[_0x2fb98f(0xc1)]=![],document['getElementById'](_0x2fb98f(0xcf))['checked']=![],document['getElementById'](_0x2fb98f(0xa1))[_0x2fb98f(0xc1)]=![],document[_0x2fb98f(0x81)](_0x2fb98f(0xbd))['checked']=![],document[_0x2fb98f(0x81)](_0x2fb98f(0xbc))[_0x2fb98f(0x9b)]=!![],document[_0x2fb98f(0x81)]('cantidadExtraCheddar')[_0x2fb98f(0x9b)]=!![],document[_0x2fb98f(0x81)](_0x2fb98f(0x79))[_0x2fb98f(0x9b)]=!![],document[_0x2fb98f(0x81)](_0x2fb98f(0x8c))[_0x2fb98f(0x9b)]=!![],document[_0x2fb98f(0x81)]('cantidadExtraLechuga')[_0x2fb98f(0x9b)]=!![],document[_0x2fb98f(0x81)]('cantidadExtraTomate')[_0x2fb98f(0x9b)]=!![],document[_0x2fb98f(0x81)](_0x2fb98f(0x7f))[_0x2fb98f(0x9a)]='',document[_0x2fb98f(0x81)](_0x2fb98f(0x90))[_0x2fb98f(0xc6)](_0x2fb98f(0x78)),document['getElementById'](_0x2fb98f(0x90))[_0x2fb98f(0xc6)](_0x2fb98f(0xba)),document['getElementById'](_0x2fb98f(0x90))[_0x2fb98f(0xc6)]('data-cantidad');}function cerrarModalLomi(){const _0x309061=_0xaac6;document['getElementById'](_0x309061(0x99))['classList'][_0x309061(0x93)](_0x309061(0x98)),document['getElementById'](_0x309061(0xc5))[_0x309061(0x9a)]=0x0,document[_0x309061(0x81)](_0x309061(0x8f))[_0x309061(0x9a)]=0x0,document['getElementById'](_0x309061(0x74))[_0x309061(0x9a)]=0x0,document[_0x309061(0x81)](_0x309061(0x9f))[_0x309061(0x9a)]=0x0,document[_0x309061(0x81)](_0x309061(0x7a))['value']=0x0,document['getElementById']('cantidadExtraTomate1')[_0x309061(0x9a)]=0x0,document[_0x309061(0x81)](_0x309061(0x7c))['checked']=![],document[_0x309061(0x81)](_0x309061(0xce))[_0x309061(0xc1)]=![],document[_0x309061(0x81)](_0x309061(0x75))[_0x309061(0xc1)]=![],document[_0x309061(0x81)](_0x309061(0x72))['checked']=![],document[_0x309061(0x81)](_0x309061(0xaa))[_0x309061(0xc1)]=![],document[_0x309061(0x81)](_0x309061(0xb9))[_0x309061(0xc1)]=![],document[_0x309061(0x81)](_0x309061(0xc5))['disabled']=!![],document[_0x309061(0x81)](_0x309061(0x8f))[_0x309061(0x9b)]=!![],document[_0x309061(0x81)](_0x309061(0x74))[_0x309061(0x9b)]=!![],document['getElementById']('cantidadExtraHuevo1')[_0x309061(0x9b)]=!![],document[_0x309061(0x81)]('cantidadExtraLechuga1')[_0x309061(0x9b)]=!![],document[_0x309061(0x81)](_0x309061(0xa9))[_0x309061(0x9b)]=!![],document[_0x309061(0x81)]('otrosExtras')['value']='',document[_0x309061(0x81)](_0x309061(0x99))['removeAttribute'](_0x309061(0x78)),document[_0x309061(0x81)](_0x309061(0x99))[_0x309061(0xc6)](_0x309061(0xba)),document[_0x309061(0x81)]('extrasModalLomi')[_0x309061(0xc6)](_0x309061(0xbb));}function _0x51ac(){const _0x4d326=['Total:\x20Gs\x20','checked','cantidadExtraCheddar','setAttribute','forEach','cantidadExtraLomi','removeAttribute','3111310UtKGEF','notification','resumenPedido','4888086IBolAt','subtotal','querySelectorAll','precio','extraMuzarella','extraHuevo','finalizarPedidoBtn','.tablinks','x\x20Extra\x20Muzarella\x20x','1098dDwFON','?text=','open','scrollTo','x\x20Extra\x20Bacon','innerHTML','extraHuevo1','5xYBuWr','cantidadExtraBacon1','extraBacon1','promoModal','extraCheddar','data-item','cantidadExtraBacon','cantidadExtraLechuga1','x\x20Extra\x20Lechuga','extraLomi','display','cantidadExtraLechuga','otrosExtras','_blank','getElementById','none','toFixed','defaultTab','show','7mNjLfd','active','x\x20Extra\x20Carne','block','appendChild','remove','cantidadExtraHuevo','3368310KBlGCH','push','cantidadExtraMuzza','extrasModal','77320YfSZcn','\x20(Extras:\x20','add','\x20-\x20Gs\x20','x\x20Extra\x20Huevo\x20Frito','style','https://wa.me/','hidden','extrasModalLomi','value','disabled','length','extraCarne','extraBacon','cantidadExtraHuevo1','Pedir\x20por\x20Whatsapp\x20(Gs\x20','extraLechuga','496562oQzcIz','adModal','\x20-\x20Gs','innerText','createElement','getAttribute','cantidadExtraTomate','cantidadExtraTomate1','extraLechuga1','addEventListener','55yThLwc','currentTarget','384723kUyCul','join','total','No\x20has\x20añadido\x20ningún\x20artículo\x20al\x20pedido.','cantidad','item','3257924ZtNPEm','pedido','x\x20Extra\x20Cheddar\x20x','x\x20Extra\x20Lomi','resumenModal','extraTomate1','data-precio','data-cantidad','cantidadExtraCarne','extraTomate','onload','classList'];_0x51ac=function(){return _0x4d326;};return _0x51ac();}function enviarPedido(){const _0x5c9dc2=_0xaac6;if(pedido[_0x5c9dc2(0x9c)]===0x0){alert(_0x5c9dc2(0xb1));return;}let _0xf26803='Hola\x20Don\x20Sabor,\x20mi\x20pedido\x20desde\x20la\x20web\x20es:\x0a';pedido['forEach'](_0xdf4705=>{const _0x26e4ad=_0x5c9dc2;_0xf26803+=_0xdf4705[_0x26e4ad(0xb2)]+'x\x20'+_0xdf4705[_0x26e4ad(0xb3)]+_0x26e4ad(0x94)+_0xdf4705[_0x26e4ad(0xcd)][_0x26e4ad(0x83)](0x0)+'\x0a\x0a';}),_0xf26803+=_0x5c9dc2(0xc0)+total['toFixed'](0x0);const _0x39478f='595973547459',_0x13cce5=_0x5c9dc2(0x97)+_0x39478f+_0x5c9dc2(0xd4)+encodeURIComponent(_0xf26803);window[_0x5c9dc2(0xd5)](_0x13cce5,_0x5c9dc2(0x80));}function actualizarSubtotal(){const _0x3f6a0a=_0xaac6,_0x2a0793=parseInt(document[_0x3f6a0a(0x81)](_0x3f6a0a(0xbc))['value'])||0x0,_0xdba28e=parseInt(document[_0x3f6a0a(0x81)](_0x3f6a0a(0xc2))[_0x3f6a0a(0x9a)])||0x0,_0x4a937c=parseInt(document[_0x3f6a0a(0x81)]('cantidadExtraBacon')[_0x3f6a0a(0x9a)])||0x0,_0x54adf7=parseInt(document[_0x3f6a0a(0x81)](_0x3f6a0a(0x8c))[_0x3f6a0a(0x9a)])||0x0,_0x2b6193=parseInt(document[_0x3f6a0a(0x81)](_0x3f6a0a(0x7e))[_0x3f6a0a(0x9a)])||0x0,_0x4ebf25=parseInt(document[_0x3f6a0a(0x81)](_0x3f6a0a(0xa8))[_0x3f6a0a(0x9a)])||0x0,_0x25e6de=parseInt(document['getElementById']('cantidadExtraLomi')[_0x3f6a0a(0x9a)])||0x0,_0x1f7f32=parseInt(document['getElementById'](_0x3f6a0a(0x8f))['value'])||0x0,_0x287cb7=parseInt(document['getElementById'](_0x3f6a0a(0x74))['value'])||0x0,_0x4815ce=parseInt(document[_0x3f6a0a(0x81)](_0x3f6a0a(0x9f))[_0x3f6a0a(0x9a)])||0x0,_0x41bd90=parseInt(document[_0x3f6a0a(0x81)]('cantidadExtraLechuga1')[_0x3f6a0a(0x9a)])||0x0,_0x3f653e=parseInt(document['getElementById'](_0x3f6a0a(0xa9))['value'])||0x0;let _0x8cf1b3=precioActual*cantidadActual;_0x8cf1b3+=0x1388*_0x2a0793,_0x8cf1b3+=0x7d0*_0xdba28e,_0x8cf1b3+=0xbb8*_0x4a937c,_0x8cf1b3+=0xfa0*_0x54adf7,_0x8cf1b3+=0x7d0*_0x2b6193,_0x8cf1b3+=0x3e8*_0x4ebf25,_0x8cf1b3+=0x1b58*_0x25e6de,_0x8cf1b3+=0x7d0*_0x1f7f32,_0x8cf1b3+=0xbb8*_0x287cb7,_0x8cf1b3+=0xfa0*_0x4815ce,_0x8cf1b3+=0x7d0*_0x41bd90,_0x8cf1b3+=0x3e8*_0x3f653e,document[_0x3f6a0a(0x81)](_0x3f6a0a(0xcb))[_0x3f6a0a(0xa5)]=_0x8cf1b3[_0x3f6a0a(0x83)](0x0);}function toggleInput(_0x56e0ca,_0x2eb87b){const _0x361e0e=_0xaac6,_0x17c76d=document[_0x361e0e(0x81)](_0x56e0ca),_0x301684=document[_0x361e0e(0x81)](_0x2eb87b);_0x17c76d[_0x361e0e(0xc1)]?(_0x301684[_0x361e0e(0x9b)]=![],_0x301684[_0x361e0e(0x9a)]=0x1):(_0x301684['disabled']=!![],_0x301684[_0x361e0e(0x9a)]=0x0);}function verResumenPedido(){const _0x28969c=_0xaac6,_0x4a4129=document[_0x28969c(0x81)](_0x28969c(0xc9));_0x4a4129[_0x28969c(0x71)]='',pedido[_0x28969c(0xc4)](_0x215a16=>{const _0x41bf2f=_0x28969c,_0x392da2=document['createElement']('p');_0x392da2[_0x41bf2f(0xa5)]=_0x215a16[_0x41bf2f(0xb2)]+'x\x20'+_0x215a16['item']+_0x41bf2f(0xa4)+_0x215a16[_0x41bf2f(0xcd)]['toFixed'](0x0),_0x4a4129[_0x41bf2f(0x8a)](_0x392da2);});const _0x821dbc=document['getElementById']('totalResumen');_0x821dbc[_0x28969c(0xa5)]='Total:\x20Gs\x20'+total[_0x28969c(0x83)](0x0),document[_0x28969c(0x81)](_0x28969c(0xb8))[_0x28969c(0xbf)][_0x28969c(0x8b)](_0x28969c(0x98));}function cerrarResumenModal(){const _0x1ce789=_0xaac6;document['getElementById'](_0x1ce789(0xb8))[_0x1ce789(0xbf)][_0x1ce789(0x93)](_0x1ce789(0x98));}window[_0x4ea06e(0xab)]('beforeunload',function(){const _0x2eec67=_0x4ea06e;window[_0x2eec67(0xd6)](0x0,0x0);});function cambiarCantidad(_0x41dd37,_0x8759d8){const _0x739f9d=_0x4ea06e,_0x2a8713=document[_0x739f9d(0x81)](_0x41dd37);let _0x537c98=parseInt(_0x2a8713['value']);_0x537c98+=_0x8759d8,_0x537c98<0x1&&(_0x537c98=0x1),_0x2a8713[_0x739f9d(0x9a)]=_0x537c98;}function resetCantidadInputs(){const _0x16efa3=_0x4ea06e,_0x5d838f=document['querySelectorAll']('.quantity-controls\x20input[type=\x22number\x22]');_0x5d838f[_0x16efa3(0xc4)](_0x3ab249=>{const _0x446a84=_0x16efa3;_0x3ab249[_0x446a84(0x9a)]=0x1;});}function openTab(_0x4b4da7,_0x309dfc){const _0xf13cd7=_0x4ea06e,_0x145340=document[_0xf13cd7(0xcc)]('.tabcontent');_0x145340['forEach'](_0x3a1192=>_0x3a1192[_0xf13cd7(0xbf)][_0xf13cd7(0x8b)](_0xf13cd7(0x87)));const _0x3a250d=document[_0xf13cd7(0xcc)](_0xf13cd7(0xd1));_0x3a250d[_0xf13cd7(0xc4)](_0x53dbef=>_0x53dbef[_0xf13cd7(0xbf)][_0xf13cd7(0x8b)](_0xf13cd7(0x87))),document['getElementById'](_0x309dfc)[_0xf13cd7(0xbf)]['add'](_0xf13cd7(0x87)),_0x4b4da7[_0xf13cd7(0xad)][_0xf13cd7(0xbf)][_0xf13cd7(0x93)](_0xf13cd7(0x87));}function cerrarModalPromo(){const _0x2fd33f=_0x4ea06e;document['getElementById'](_0x2fd33f(0x76))[_0x2fd33f(0x96)]['display']='none';}function cerrarModalPubli(){const _0x5de90a=_0x4ea06e;document['getElementById'](_0x5de90a(0xa3))[_0x5de90a(0x96)][_0x5de90a(0x7d)]=_0x5de90a(0x82);}document[_0x4ea06e(0x81)](_0x4ea06e(0x84))['click'](),window[_0x4ea06e(0xbe)]=function(){const _0x5ddfa1=_0x4ea06e;document['getElementById'](_0x5ddfa1(0xa3))[_0x5ddfa1(0x96)][_0x5ddfa1(0x7d)]='flex';};
+let pedido = [];
+let total = 0;
+let precioActual = 0;
+let cantidadActual = 0;
+let itemActual = "";
+
+// Función para añadir un ítem
+function addItem(item, precio, cantidad) {
+    // Convertir precio y cantidad a números
+    const precioBase = parseFloat(precio);
+    const cantidadItem = parseInt(cantidad);
+
+    // Almacenar los valores temporalmente en el modal (podemos usarlos localmente luego)
+    document.getElementById('extrasModal').setAttribute('data-item', item);
+    document.getElementById('extrasModal').setAttribute('data-precio', precioBase);
+    document.getElementById('extrasModal').setAttribute('data-cantidad', cantidadItem);
+
+    // Abrir modal para seleccionar extras
+    document.getElementById('extrasModal').classList.remove('hidden');
+}
+
+function addItemLomi(item, precio, cantidad) {
+    // Convertir precio y cantidad a números
+    const precioBase = parseFloat(precio);
+    const cantidadItem = parseInt(cantidad);
+
+    // Almacenar los valores temporalmente en el modal (podemos usarlos localmente luego)
+    document.getElementById('extrasModalLomi').setAttribute('data-item', item);
+    document.getElementById('extrasModalLomi').setAttribute('data-precio', precioBase);
+    document.getElementById('extrasModalLomi').setAttribute('data-cantidad', cantidadItem);
+
+    // Abrir modal para seleccionar extras
+    document.getElementById('extrasModalLomi').classList.remove('hidden');
+}
+
+// Función para añadir un ítem sin extras
+function addItem1(item, precio, cantidad) {
+    // Convertir precio y cantidad a números
+    const precioBase = parseFloat(precio);
+    const cantidadItem = parseInt(cantidad);
+
+    // Calcular el subtotal para este ítem
+    const subtotal = precioBase * cantidadItem;
+
+    // Agregar el artículo al pedido
+    pedido.push({ item: item, cantidad: cantidadItem, precio: subtotal });
+
+    // Actualizar visualmente el pedido
+    actualizarPedido();
+
+    // Sumar el subtotal al total general
+    total += subtotal;
+    document.getElementById('total').innerText = total.toFixed(0); // Mostrar total actualizado
+
+    // Actualizar el texto del botón de finalizar pedido con el total
+    const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
+    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+
+    // Mostrar notificación de éxito
+    mostrarNotificacion();
+    finalizarPedidoBtn.classList.remove('hidden');
+
+
+     // Resetear las cantidades a 1
+    resetCantidadInputs();
+}
+
+
+// Función para actualizar la visualización del pedido
+function actualizarPedido() {
+    const pedidoDiv = document.getElementById('pedido');
+    pedidoDiv.innerHTML = ''; // Limpiar el contenido previo
+
+    pedido.forEach((articulo) => {
+        const p = document.createElement('p');
+        p.innerText = `${articulo.cantidad}x ${articulo.item} - Gs ${(articulo.precio).toFixed(0)}`;
+        pedidoDiv.appendChild(p);
+    });
+
+}
+
+
+
+
+function confirmarPedido() {
+    // Obtener el producto, precio base y cantidad desde los atributos del modal
+    const itemActual = document.getElementById('extrasModal').getAttribute('data-item');
+    const precioActual = parseFloat(document.getElementById('extrasModal').getAttribute('data-precio'));
+    const cantidadActual = parseInt(document.getElementById('extrasModal').getAttribute('data-cantidad'));
+
+    const cantidadExtraCarne = parseInt(document.getElementById('cantidadExtraCarne').value) || 0;
+    const cantidadExtraCheddar = parseInt(document.getElementById('cantidadExtraCheddar').value) || 0;
+    const cantidadExtraBacon = parseInt(document.getElementById('cantidadExtraBacon').value) || 0;
+    const cantidadExtraHuevo = parseInt(document.getElementById('cantidadExtraHuevo').value) || 0;
+    const cantidadExtraLechuga = parseInt(document.getElementById('cantidadExtraLechuga').value) || 0;
+    const cantidadExtraTomate = parseInt(document.getElementById('cantidadExtraTomate').value) || 0;
+
+    let extrasTexto = [];
+    let subtotal = precioActual * cantidadActual; // Precio del ítem base por la cantidad
+
+    // Añadir extras al subtotal
+    if (cantidadExtraCarne > 0) {
+        extrasTexto.push(`${cantidadExtraCarne}x Extra Carne`);
+        subtotal += 5000 * cantidadExtraCarne;
+    }
+    if (cantidadExtraCheddar > 0) {
+        extrasTexto.push(`${cantidadExtraCheddar}x Extra Cheddar x`);
+        subtotal += 2000 * cantidadExtraCheddar;
+    }
+    if (cantidadExtraBacon > 0) {
+        extrasTexto.push(`${cantidadExtraBacon}x Extra Bacon`);
+        subtotal += 3000 * cantidadExtraBacon;
+    }
+    if (cantidadExtraHuevo > 0) {
+        extrasTexto.push(`${cantidadExtraHuevo}x Extra Huevo Frito`);
+        subtotal += 4000 * cantidadExtraHuevo;
+    }
+    if (cantidadExtraLechuga > 0) {
+        extrasTexto.push(`${cantidadExtraLechuga}x Extra Lechuga`);
+        subtotal += 2000 * cantidadExtraLechuga;
+    }
+    if (cantidadExtraTomate > 0) {
+        extrasTexto.push(`${cantidadExtraTomate}x Extra Tomate`);
+        subtotal += 1000 * cantidadExtraTomate;
+    }
+    if (document.getElementById('otrosExtras').value) {
+        extrasTexto.push(document.getElementById('otrosExtras').value);
+    }
+
+    const extrasTextoCompleto = extrasTexto.length > 0 ? ` (Extras: ${extrasTexto.join(', ')})` : '';
+
+    // Agregar el artículo con los extras al pedido
+    pedido.push({ item: itemActual + extrasTextoCompleto, cantidad: cantidadActual, precio: subtotal });
+
+    // Actualizar visualmente el pedido
+    actualizarPedido();
+
+    // Sumar el subtotal al total general
+    total += subtotal;
+    document.getElementById('total').innerText = total.toFixed(0); // Mostrar total actualizado
+
+    //verificarPromo(total);
+
+    // Actualizar el texto del botón con el total entre paréntesis
+    const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
+    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+
+    mostrarNotificacion();
+    finalizarPedidoBtn.classList.remove('hidden');
+
+
+    // Resetear las cantidades a 1
+    resetCantidadInputs();
+
+    cerrarModal();
+}
+
+function confirmarPedido1() {
+    // Obtener el producto, precio base y cantidad desde los atributos del modal
+    const itemActual = document.getElementById('extrasModalLomi').getAttribute('data-item');
+    const precioActual = parseFloat(document.getElementById('extrasModalLomi').getAttribute('data-precio'));
+    const cantidadActual = parseInt(document.getElementById('extrasModalLomi').getAttribute('data-cantidad'));
+
+    const cantidadExtraLomi = parseInt(document.getElementById('cantidadExtraLomi').value) || 0;
+    const cantidadExtraMuzza = parseInt(document.getElementById('cantidadExtraMuzza').value) || 0;
+    const cantidadExtraBacon1 = parseInt(document.getElementById('cantidadExtraBacon1').value) || 0;
+    const cantidadExtraHuevo1 = parseInt(document.getElementById('cantidadExtraHuevo1').value) || 0;
+    const cantidadExtraLechuga1 = parseInt(document.getElementById('cantidadExtraLechuga1').value) || 0;
+    const cantidadExtraTomate1 = parseInt(document.getElementById('cantidadExtraTomate1').value) || 0;
+
+    let extrasTexto = [];
+    let subtotal = precioActual * cantidadActual; // Precio del ítem base por la cantidad
+
+    // Añadir extras al subtotal
+    if (cantidadExtraLomi > 0) {
+        extrasTexto.push(`${cantidadExtraLomi}x Extra Lomi`);
+        subtotal += 7000 * cantidadExtraLomi;
+    }
+    if (cantidadExtraMuzza > 0) {
+        extrasTexto.push(`${cantidadExtraMuzza}x Extra Muzarella x`);
+        subtotal += 2000 * cantidadExtraMuzza;
+    }
+    if (cantidadExtraBacon1 > 0) {
+        extrasTexto.push(`${cantidadExtraBacon1}x Extra Bacon`);
+        subtotal += 3000 * cantidadExtraBacon1;
+    }
+    if (cantidadExtraHuevo1 > 0) {
+        extrasTexto.push(`${cantidadExtraHuevo1}x Extra Huevo Frito`);
+        subtotal += 4000 * cantidadExtraHuevo1;
+    }
+    if (cantidadExtraLechuga1 > 0) {
+        extrasTexto.push(`${cantidadExtraLechuga1}x Extra Lechuga`);
+        subtotal += 2000 * cantidadExtraLechuga1;
+    }
+    if (cantidadExtraTomate1 > 0) {
+        extrasTexto.push(`${cantidadExtraTomate1}x Extra Tomate`);
+        subtotal += 1000 * cantidadExtraTomate1;
+    }
+    if (document.getElementById('otrosExtras').value) {
+        extrasTexto.push(document.getElementById('otrosExtras').value);
+    }
+
+    const extrasTextoCompleto = extrasTexto.length > 0 ? ` (Extras: ${extrasTexto.join(', ')})` : '';
+
+    // Agregar el artículo con los extras al pedido
+    pedido.push({ item: itemActual + extrasTextoCompleto, cantidad: cantidadActual, precio: subtotal });
+
+    // Actualizar visualmente el pedido
+    actualizarPedido();
+
+    // Sumar el subtotal al total general
+    total += subtotal;
+    document.getElementById('total').innerText = total.toFixed(0); // Mostrar total actualizado
+
+
+    //verificarPromo(total);
+
+
+    // Actualizar el texto del botón con el total entre paréntesis
+    const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
+    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+
+    mostrarNotificacion();
+    finalizarPedidoBtn.classList.remove('hidden');
+
+
+    // Resetear las cantidades a 1
+    resetCantidadInputs();
+
+    cerrarModalLomi();
+}
+
+function verificarPromo(total) {
+    if (total >= 80000) {
+        document.getElementById('promoModal').style.display = 'block';
+    }
+}
+
+
+
+
+// Función para mostrar la notificación
+function mostrarNotificacion() {
+    const notificacion = document.getElementById('notification');
+    notificacion.classList.remove('hidden'); // Asegúrate de eliminar la clase hidden
+    notificacion.classList.add('show'); // Añadir la clase show
+
+    setTimeout(() => {
+        notificacion.classList.remove('show'); // Eliminar la clase show después de 2 segundos
+        notificacion.classList.add('hidden'); // Añadir la clase hidden para ocultar
+    }, 2000); // Mostrar la notificación por 2 segundos
+}
+
+
+function cerrarModal() {
+    // Ocultar el modal
+    document.getElementById('extrasModal').classList.add('hidden');
+    
+    // Resetear los valores de los inputs de cantidad
+    document.getElementById('cantidadExtraCarne').value = 0;
+    document.getElementById('cantidadExtraCheddar').value = 0;
+    document.getElementById('cantidadExtraBacon').value = 0;
+    document.getElementById('cantidadExtraHuevo').value = 0;
+    document.getElementById('cantidadExtraLechuga').value = 0;
+    document.getElementById('cantidadExtraTomate').value = 0;
+
+    // Resetear los checkboxes
+    document.getElementById('extraCarne').checked = false;
+    document.getElementById('extraCheddar').checked = false;
+    document.getElementById('extraBacon').checked = false;
+    document.getElementById('extraHuevo').checked = false;
+    document.getElementById('extraLechuga').checked = false;
+    document.getElementById('extraTomate').checked = false;
+
+    // Deshabilitar todos los inputs de cantidad
+    document.getElementById('cantidadExtraCarne').disabled = true;
+    document.getElementById('cantidadExtraCheddar').disabled = true;
+    document.getElementById('cantidadExtraBacon').disabled = true;
+    document.getElementById('cantidadExtraHuevo').disabled = true;
+    document.getElementById('cantidadExtraLechuga').disabled = true;
+    document.getElementById('cantidadExtraTomate').disabled = true;
+
+    // Resetear el campo de texto de "otrosExtras"
+    document.getElementById('otrosExtras').value = '';
+
+    // Limpiar los atributos de datos del modal
+    document.getElementById('extrasModal').removeAttribute('data-item');
+    document.getElementById('extrasModal').removeAttribute('data-precio');
+    document.getElementById('extrasModal').removeAttribute('data-cantidad');
+}
+
+function cerrarModalLomi() {
+    // Ocultar el modal
+    document.getElementById('extrasModalLomi').classList.add('hidden');
+    
+    // Resetear los valores de los inputs de cantidad
+    document.getElementById('cantidadExtraLomi').value = 0;
+    document.getElementById('cantidadExtraMuzza').value = 0;
+    document.getElementById('cantidadExtraBacon1').value = 0;
+    document.getElementById('cantidadExtraHuevo1').value = 0;
+    document.getElementById('cantidadExtraLechuga1').value = 0;
+    document.getElementById('cantidadExtraTomate1').value = 0;
+
+    // Resetear los checkboxes
+    document.getElementById('extraLomi').checked = false;
+    document.getElementById('extraMuzarella').checked = false;
+    document.getElementById('extraBacon1').checked = false;
+    document.getElementById('extraHuevo1').checked = false;
+    document.getElementById('extraLechuga1').checked = false;
+    document.getElementById('extraTomate1').checked = false;
+
+    // Deshabilitar todos los inputs de cantidad
+    document.getElementById('cantidadExtraLomi').disabled = true;
+    document.getElementById('cantidadExtraMuzza').disabled = true;
+    document.getElementById('cantidadExtraBacon1').disabled = true;
+    document.getElementById('cantidadExtraHuevo1').disabled = true;
+    document.getElementById('cantidadExtraLechuga1').disabled = true;
+    document.getElementById('cantidadExtraTomate1').disabled = true;
+
+    // Resetear el campo de texto de "otrosExtras"
+    document.getElementById('otrosExtras').value = '';
+
+    // Limpiar los atributos de datos del modal
+    document.getElementById('extrasModalLomi').removeAttribute('data-item');
+    document.getElementById('extrasModalLomi').removeAttribute('data-precio');
+    document.getElementById('extrasModalLomi').removeAttribute('data-cantidad');
+}
+
+
+
+
+
+
+// Función para enviar el pedido por WhatsApp
+function enviarPedido() {
+    if (pedido.length === 0) {
+        alert('No has añadido ningún artículo al pedido.');
+        return;
+    }
+
+    let mensaje = 'Hola Don Sabor, mi pedido desde la web es:\n';
+    pedido.forEach(articulo => {
+        mensaje += `${articulo.cantidad}x ${articulo.item} - Gs ${articulo.precio.toFixed(0)}\n\n`;
+    });
+    mensaje += `Total: Gs ${total.toFixed(0)}`;
+
+
+const telefono = '595973547459'; // Sustituye XXXXXXXXX por tu número de teléfono (sin el símbolo + ni espacios)
+const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+window.open(url, '_blank');
+}
+
+// Función para actualizar el subtotal en tiempo real
+function actualizarSubtotal() {
+    const cantidadExtraCarne = parseInt(document.getElementById('cantidadExtraCarne').value) || 0;
+    const cantidadExtraCheddar = parseInt(document.getElementById('cantidadExtraCheddar').value) || 0;
+    const cantidadExtraBacon = parseInt(document.getElementById('cantidadExtraBacon').value) || 0;
+    const cantidadExtraHuevo = parseInt(document.getElementById('cantidadExtraHuevo').value) || 0;
+    const cantidadExtraLechuga = parseInt(document.getElementById('cantidadExtraLechuga').value) || 0;
+    const cantidadExtraTomate = parseInt(document.getElementById('cantidadExtraTomate').value) || 0;
+
+    const cantidadExtraLomi = parseInt(document.getElementById('cantidadExtraLomi').value) || 0;
+    const cantidadExtraMuzza = parseInt(document.getElementById('cantidadExtraMuzza').value) || 0;
+    const cantidadExtraBacon1 = parseInt(document.getElementById('cantidadExtraBacon1').value) || 0;
+    const cantidadExtraHuevo1 = parseInt(document.getElementById('cantidadExtraHuevo1').value) || 0;
+    const cantidadExtraLechuga1 = parseInt(document.getElementById('cantidadExtraLechuga1').value) || 0;
+    const cantidadExtraTomate1 = parseInt(document.getElementById('cantidadExtraTomate1').value) || 0;
+
+
+
+
+    let subtotal = precioActual * cantidadActual;
+    subtotal += 5000 * cantidadExtraCarne;
+    subtotal += 2000 * cantidadExtraCheddar;
+    subtotal += 3000 * cantidadExtraBacon;
+    subtotal += 4000 * cantidadExtraHuevo;
+    subtotal += 2000 * cantidadExtraLechuga;
+    subtotal += 1000 * cantidadExtraTomate;
+
+    subtotal += 7000 * cantidadExtraLomi;
+    subtotal += 2000 * cantidadExtraMuzza;
+    subtotal += 3000 * cantidadExtraBacon1;
+    subtotal += 4000 * cantidadExtraHuevo1;
+    subtotal += 2000 * cantidadExtraLechuga1;
+    subtotal += 1000 * cantidadExtraTomate1;
+
+
+    document.getElementById('subtotal').innerText = subtotal.toFixed(0);
+}
+
+// Función para habilitar/deshabilitar inputs de cantidad extra
+function toggleInput(checkboxId, inputId) {
+    const checkbox = document.getElementById(checkboxId);
+    const input = document.getElementById(inputId);
+
+    if (checkbox.checked) {
+        input.disabled = false;
+        input.value = 1;
+    } else {
+        input.disabled = true;
+        input.value = 0;
+    }
+}
+
+// Función para mostrar el resumen del pedido
+function verResumenPedido() {
+    // Limpiar el contenido previo del resumen
+    const resumenDiv = document.getElementById('resumenPedido');
+    resumenDiv.innerHTML = '';
+
+    // Crear el contenido del resumen
+    pedido.forEach(articulo => {
+        const p = document.createElement('p');
+        p.innerText = `${articulo.cantidad}x ${articulo.item} - Gs${articulo.precio.toFixed(0)}`;
+        resumenDiv.appendChild(p);
+    });
+
+    // Mostrar el total en el resumen
+    const totalResumen = document.getElementById('totalResumen');
+    totalResumen.innerText = `Total: Gs ${total.toFixed(0)}`;
+
+    // Mostrar el modal
+    document.getElementById('resumenModal').classList.remove('hidden');
+}
+
+// Función para cerrar el modal
+function cerrarResumenModal() {
+    // Ocultar el modal
+    document.getElementById('resumenModal').classList.add('hidden');
+}
+
+
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0); // Desplazar a la parte superior
+});
+
+
+function cambiarCantidad(inputId, cambio) {
+    const input = document.getElementById(inputId);
+    let cantidadActual = parseInt(input.value);
+
+    // Cambiar la cantidad según el botón presionado
+    cantidadActual += cambio;
+
+    // Asegurarse de que no sea menor que 1
+    if (cantidadActual < 1) {
+        cantidadActual = 1;
+    }
+
+    // Actualizar el valor del input
+    input.value = cantidadActual;
+}
+
+// Función para resetear los inputs de cantidad
+function resetCantidadInputs() {
+    const inputsCantidad = document.querySelectorAll('.quantity-controls input[type="number"]');
+    inputsCantidad.forEach(input => {
+        input.value = 1; // Resetear cada input a 1
+    });
+}
+
+function openTab(evt, tabName) {
+    // Ocultar todas las pestañas
+    const tabcontent = document.querySelectorAll('.tabcontent');
+    tabcontent.forEach(content => content.classList.remove('active'));
+
+    // Quitar clase 'active' de todos los botones
+    const tablinks = document.querySelectorAll('.tablinks');
+    tablinks.forEach(link => link.classList.remove('active'));
+
+    // Mostrar la pestaña seleccionada y agregar clase 'active' al botón
+    document.getElementById(tabName).classList.add('active');
+    evt.currentTarget.classList.add('active');
+}
+
+
+
+function cerrarModalPromo() {
+    document.getElementById('promoModal').style.display = 'none';
+}
+
+
+// Cerrar el modal al hacer clic en la X
+function cerrarModalPubli() {
+    document.getElementById('adModal').style.display = 'none';
+}
+
+
+// Activar la primera pestaña por defecto
+document.getElementById("defaultTab").click();
+
+
+// Mostrar el modal al cargar la página
+/*
+window.onload = function() {
+    document.getElementById('adModal').style.display = 'flex';
+}
+*/
+
+

@@ -83,7 +83,7 @@ input[type="checkbox"] {
 
 /* Botón de finalizar pedido */
 .send-button {
-    flex: 2; /* Toma los 2/3 del espacio */
+    flex: 1; /* Toma los 2/3 del espacio */
     padding: 15px;
     font-size: 16px;
     text-align: center;
@@ -185,7 +185,7 @@ p {
 }
 
 .add-button {
-    flex: 1; /* Los botones se expandirán para ocupar todo el espacio */
+    flex: 3; /* Los botones se expandirán para ocupar todo el espacio */
     background-color: #28a745;
     color: white;
     border: none;
@@ -299,8 +299,6 @@ p {
     display: block; /* Muestra la notificación */
     opacity: 1; /* Hacerla visible */
 }
-
-
 
 
 #pedido {
@@ -514,4 +512,7 @@ input[type="number"] {
     border-radius: 5px; /* Esquinas redondeadas */
     padding: 5px; /* Espaciado interno */
 }
+
+
+
 
