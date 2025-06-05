@@ -17,7 +17,6 @@
             <button class="tablinks" onclick="openTab(event, 'Burgers')" id="defaultTab">Burgers</button>
             <button class="tablinks" onclick="openTab(event, 'Acompañamientos')">Acompañamientos</button>
             <button class="tablinks" onclick="openTab(event, 'Lomi Árabe')">Lomi Árabe</button>
-
         </div>
 
         <!-- Contenido de cada pestaña -->
@@ -235,24 +234,48 @@
 
 
         <div class="item">
-            <img src="imagenes/CocaLata01.jpg" alt="Coca Cola 310ml">
+            <img src="imagenes/CocaLata01.jpg" alt="Coca Cola 350ml">
             <div class="item-details">
-                <h2 class='nombre'>Coca Cola 310ml</h2>
-                <p>Bebida gasificada sabor cola en lata de 310ml.</p>
+                <h2 class='nombre'>Coca Cola 350ml</h2>
+                <p>Bebida gasificada sabor cola en lata de 350ml.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-coca310">6000</span></p>
+                <p class='price'>Precio Gs <span class="precio" id="precio-coca350">6000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-coca310">Cantidad:</label>
+                    <label for="cantidad-coca350">Cantidad:</label>
                     <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca310', -1)">-</button>
-                        <input type="number" id="cantidad-coca310" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca310', 1)">+</button>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca350', -1)">-</button>
+                        <input type="number" id="cantidad-coca350" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca350', 1)">+</button>
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Coca Cola 310ml', 6000, document.getElementById('cantidad-coca310').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Coca Cola 350ml', 6000, document.getElementById('cantidad-coca350').value)">Añadir</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="imagenes/coca1l.jpg" alt="Coca Cola 1L">
+            <div class="item-details">
+                <h2 class='nombre'>Coca Cola 1L</h2>
+                <p>Bebida gasificada sabor cola en botella de 1 litro.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-coca1l">8000</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-coca1l">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca1l', -1)">-</button>
+                        <input type="number" id="cantidad-coca1l" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca1l', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Coca Cola 1L', 8000, document.getElementById('cantidad-coca1l').value)">Añadir</button>
                 </div>
 
             </div>
@@ -673,26 +696,26 @@
 
 
 <!-- Modal para promos -->
-<!--
+
 <div id="promoModal" class="modal hidden">
     <div class="modal-content">
         <span class="close" onclick="cerrarModalPromo()">&times;</span>
         <p>¡Felicidades! Por tu compra te ganaste una Coca Cola de 1L gratis.</p>
     </div>
 </div>
--->
+
 
 
 
 <!-- Modal para publicidad -->
-<!--
+
 <div id="adModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="cerrarModalPubli()">&times;</span>
-        <img src="imagenes/promo-10OFF.png" alt="Publicidad" class="ad-image">
+        <img src="imagenes/promo-albirro02.png" alt="Publicidad" class="ad-image">
     </div>
 </div>
--->
+
 
 
 </body>
