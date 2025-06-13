@@ -26,6 +26,36 @@
             <div class="menu">
 
                 <div class="item">
+                    <img src="imagenes/bbq.jpg" alt="BBQ (Especial del mes)">
+                    <div class="item-details">
+                        <h2 class='nombre'>BBQ Burger</h2>
+                        <p>Pan classic, triple ultra smash (70g cada), triple cheddar, bacon crujiente, cebolla morada, lechuga repollada, salsa barbacoa.</p>
+                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+
+                        <p class='price'>Precio Gs <span class="precio" id="precio-bbq">25000</span></p>
+
+
+                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-bbq-combo">35000</span> </p>
+
+                        <div class="quantity-container">
+                            <label for="cantidad-bbq">Cantidad:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-button" onclick="cambiarCantidad('cantidad-bbq', -1)">-</button>
+                                <input type="number" id="cantidad-bbq" value="1" min="1" readonly>
+                                <button class="quantity-button" onclick="cambiarCantidad('cantidad-bbq', 1)">+</button>
+                            </div>
+                        </div>
+
+
+                        <div class="button-container">
+                            <button class="add-button" onclick="addItem('BBQ Burger', 25000, document.getElementById('cantidad-bbq').value)">Añadir</button>
+                            <button class="add-button1" onclick="addItem('BBQ Burger Combo', 35000, document.getElementById('cantidad-bbq').value)">Añadir Combo</button>
+                        </div>
+                    </div>
+                </div>                
+
+
+                <div class="item">
                     <img src="imagenes/Classic01.jpg" alt="Hamburguesa Clásica">
                     <div class="item-details">
                         <h2 class='nombre'>Classic</h2>
