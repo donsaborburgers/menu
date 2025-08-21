@@ -334,7 +334,6 @@ p {
 }
 
 .modal {
-  display: none; /* arranca oculto */
   justify-content: center;
   align-items: center;
   position: fixed;
