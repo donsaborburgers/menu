@@ -8,6 +8,34 @@ body {
     background-position: center;
 }
 
+#btnDelivery {
+    background-color: #007bff; /* azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnRetirar {
+    background-color: #28a745; /* verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+#btnDelivery:hover {
+    background-color: #0056b3;
+}
+
+#btnRetirar:hover {
+    background-color: #1e7e34;
+}
+
+
 
 
 input[type="checkbox"] {
