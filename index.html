@@ -8,14 +8,14 @@
 </head>
 <body>
 
-    <!-- Modal -->
-<div id="modalPedido">
-  <div id="modalContenido">
-    <h2>¿Cómo querés tu pedido?</h2>
-    <button class="btn-delivery" onclick="seleccionarTipo('Delivery')">🚚 Delivery</button>
-    <button class="btn-retirar" onclick="seleccionarTipo('Retirar')">🏃 Retirar</button>
+    <!-- Modal para elegir tipo de pedido -->
+  <div id="modalPedido" class="modal">
+    <div class="modal-contenido">
+      <h2>¿Cómo querés tu pedido?</h2>
+      <button class="opcion" onclick="seleccionarTipo('Delivery')">Delivery</button>
+      <button class="opcion" onclick="seleccionarTipo('Retirar')">Retirar</button>
+    </div>
   </div>
-</div>
 
     <div class="container">
         <h1>Menú de Don Sabor</h1>
