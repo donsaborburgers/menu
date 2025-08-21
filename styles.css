@@ -8,6 +8,54 @@ body {
     background-position: center;
 }
 
+#modalPedido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#modalContenido {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#modalContenido h2 {
+  margin-bottom: 20px;
+}
+
+#modalContenido button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-delivery {
+  background: #ff5733;
+  color: #fff;
+}
+
+.btn-retirar {
+  background: #28a745;
+  color: #fff;
+}
+
 
 
 input[type="checkbox"] {

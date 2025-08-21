@@ -8,6 +8,15 @@
 </head>
 <body>
 
+    <!-- Modal -->
+<div id="modalPedido">
+  <div id="modalContenido">
+    <h2>¿Cómo querés tu pedido?</h2>
+    <button class="btn-delivery" onclick="seleccionarTipo('Delivery')">🚚 Delivery</button>
+    <button class="btn-retirar" onclick="seleccionarTipo('Retirar')">🏃 Retirar</button>
+  </div>
+</div>
+
     <div class="container">
         <h1>Menú de Don Sabor</h1>
         <a href="#top" id="top"></a> <!-- Ancla para volver al inicio -->
@@ -19,15 +28,7 @@
             <button class="tablinks" onclick="openTab(event, 'Lomi Árabe')">Lomi Árabe</button>
         </div>
 
-        <div class="pedido-tipo">
-    <h3>¿Cómo querés tu pedido?</h3>
-    <label>
-        <input type="radio" name="tipoPedido" value="Delivery" checked> Delivery
-    </label>
-    <label>
-        <input type="radio" name="tipoPedido" value="Retirar"> Retirar
-    </label>
-</div>
+        
 
 
 
