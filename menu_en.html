@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don Sabor Burgers - Menú</title>
+    <title>Don Sabor Burgers - Menu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 
-<!-- Modal inicial -->
+<!-- Initial Modal -->
 <div id="inicioModal" class="modal">
     <div class="modal-content">
-        <h2>Que bueno tenerte por Don Sabor! 🍔 </h2>
-        <h3>¿Cómo quisieras que te entreguemos tu pedido? 🚚🏃</h3>
+        <h2>Great to have you at Don Sabor! 🍔</h2>
+        <h3>How would you like to receive your order?</h3>
 
-        <button id="btnDelivery">Delivery</button>
-        <button id="btnRetirar">Retirar en local</button>
+        <button id="btnDelivery">Eat here</button>
+        <button id="btnRetirar">Take away</button>
+        <h4>Please check if there are available seats to eat here.</h4>
+
     </div>
 </div>
 
 
 
+
 <div class="container" id="contenidoPagina" >
-        <h1>Menú de Don Sabor</h1>
+        <h1>Menu</h1>
         <a href="#top" id="top"></a> <!-- Ancla para volver al inicio -->
 
         <!-- Navegación de pestañas -->
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Burgers')" id="defaultTab">Burgers</button>
-            <button class="tablinks" onclick="openTab(event, 'Acompañamientos')">Acompañamientos</button>
-            <button class="tablinks" onclick="openTab(event, 'Lomi Árabe')">Lomi Árabe</button>
+            <button class="tablinks" onclick="openTab(event, 'Acompañamientos')">Fries & More</button>
+            <button class="tablinks" onclick="openTab(event, 'Lomi Árabe')">Arabian Shawarma</button>
         </div>
 
         <!-- Contenido de cada pestaña -->
@@ -39,33 +42,30 @@
             <!-- Aquí va el código HTML de las burgers -->
             <div class="menu">
 
-
-                
                 <div class="item">
-                    <img src="imagenes/saladmozza01.jpg" alt="Salad Mozza (Especial del mes)">
+                    <img src="imagenes/baconmozza.jpg" alt="Bacon Mozza (Especial del mes)">
                     <div class="item-details">
-                        <h2 class='nombre'>Salad Mozza (Especial del mes)</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, cebolla morada, lechuga repollada, tomate, mozzarella empanada, mayo y ketchup.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <h2 class='nombre'>Salad Mozza (Special of the Month)</h2>
+                        <p>Classic bun, double ultra smash (70g each), double cheddar, crispy bacon, breaded mozzarella, garlic mayo.</p>
+                        <p class="combo_descripcion">The combo includes: burger + portion of French fries + 250ml Coca-Cola</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-salad-mozza">30000</span></p>
+                        <p class='price'>Price PYG <span class="precio" id="precio-bacon-mozza">30000</span></p>
 
-
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-salad-mozza-combo">40000</span> </p>
+                        <p class='price'>Combo Price PYG <span class="precio" id="precio-bacon-mozza-combo">40000</span> </p>
 
                         <div class="quantity-container">
-                            <label for="cantidad-salad-mozza">Cantidad:</label>
+                            <label for="cantidad-bacon-mozza">Quantity:</label>
                             <div class="quantity-controls">
-                                <button class="quantity-button" onclick="cambiarCantidad('cantidad-salad-mozza', -1)">-</button>
-                                <input type="number" id="cantidad-salad-mozza" value="1" min="1" readonly>
-                                <button class="quantity-button" onclick="cambiarCantidad('cantidad-salad-mozza', 1)">+</button>
+                                <button class="quantity-button" onclick="cambiarCantidad('cantidad-bacon-mozza', -1)">-</button>
+                                <input type="number" id="cantidad-bacon-mozza" value="1" min="1" readonly>
+                                <button class="quantity-button" onclick="cambiarCantidad('cantidad-bacon-mozza', 1)">+</button>
                             </div>
                         </div>
 
 
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Salad Mozza Burger', 30000, document.getElementById('cantidad-salad-mozza').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Salad Mozza Burger Combo', 40000, document.getElementById('cantidad-salad-mozza').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Bacon Mozza Burger', 30000, document.getElementById('cantidad-bacon-mozza').value)">Add</button>
+                            <button class="add-button1" onclick="addItem('Bacon Mozza Burger Combo', 40000, document.getElementById('cantidad-bacon-mozza').value)">Add Combo</button>
                         </div>
                     </div>
                 </div>   
@@ -77,16 +77,18 @@
                     <img src="imagenes/Classic01.jpg" alt="Hamburguesa Clásica">
                     <div class="item-details">
                         <h2 class='nombre'>Classic</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, tomate en fetas, lechuga repollada, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <p>Classic bun, double ultra smash (70g each), double cheddar, sliced tomato, shredded lettuce, garlic mayo.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-clasica">20000</span></p>
+                        <p class="combo_descripcion">The combo includes: burger + portion of French fries + 250ml Coca-Cola</p>
 
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-clasica-combo">30000</span> </p>
+                        <p class='price'>Price PYG <span class="precio" id="precio-clasica">20000</span></p>
+
+
+                        <p class='price'>Combo Price PYG <span class="precio" id="precio-clasica-combo">30000</span> </p>
 
                         <div class="quantity-container">
-                            <label for="cantidad-clasica">Cantidad:</label>
+                            <label for="cantidad-clasica">Quantity:</label>
                             <div class="quantity-controls">
                                 <button class="quantity-button" onclick="cambiarCantidad('cantidad-clasica', -1)">-</button>
                                 <input type="number" id="cantidad-clasica" value="1" min="1" readonly>
@@ -96,26 +98,29 @@
 
 
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Add</button>
+                            <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Add Combo</button>
                         </div>
                     </div>
                 </div>
+
+
 
                 <div class="item">
                     <img src="imagenes/Bacon01.jpg" alt="Hamburguesa Bacon">
                     <div class="item-details">
                         <h2 class='nombre'>Bacon</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, bacon crujiente, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <p>Classic bun, double ultra smash (70g each), double cheddar, crispy bacon, garlic mayo.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-bacon">20000</span></p>
+                        <p class="combo_descripcion">The combo includes: burger + portion of French fries + 250ml Coca-Cola</p>
+
+                        <p class='price'>Price PYG <span class="precio" id="precio-bacon">20000</span></p>
 
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-bacon-combo">30000</span> </p>
+                        <p class='price'>Combo Price PYG <span class="precio" id="precio-bacon-combo">30000</span> </p>
 
                         <div class="quantity-container">
-                            <label for="cantidad-bacon">Cantidad:</label>
+                            <label for="cantidad-bacon">Quantity:</label>
                             <div class="quantity-controls">
                                 <button class="quantity-button" onclick="cambiarCantidad('cantidad-bacon', -1)">-</button>
                                 <input type="number" id="cantidad-bacon" value="1" min="1" readonly>
@@ -123,8 +128,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Bacon Burger', 20000, document.getElementById('cantidad-bacon').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Bacon Burger Combo', 30000, document.getElementById('cantidad-bacon').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Bacon Burger', 20000, document.getElementById('cantidad-bacon').value)">Add</button>
+                            <button class="add-button1" onclick="addItem('Bacon Burger Combo', 30000, document.getElementById('cantidad-bacon').value)">Add Combo</button>
                         </div>
 
 
@@ -134,16 +139,17 @@
                 <div class="item">
                     <img src="imagenes/Onion01.jpg" alt="Hamburguesa Fried Onion">
                     <div class="item-details">
-                        <h2 class='nombre'>Fried Onion (Oklahoma)</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, cebolla smashada con la carne, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <h2 class='nombre'>Fried Onion (Oklahoma Style)</h2>
+                        <p>Classic bun, double ultra smash (70g each), double cheddar, onion smashed with the meat, garlic mayo.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-fried">20000</span></p>
+                        <p class="combo_descripcion">The combo includes: burger + portion of French fries + 250ml Coca-Cola</p>
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-fried-combo">30000</span> </p>
+                        <p class='price'>Price PYG <span class="precio" id="precio-fried">20000</span></p>
+
+                        <p class='price'>Combo Price PYG <span class="precio" id="precio-fried-combo">30000</span> </p>
 
                         <div class="quantity-container">
-                            <label for="cantidad-fried">Cantidad:</label>
+                            <label for="cantidad-fried">Quantity:</label>
                             <div class="quantity-controls">
                                 <button class="quantity-button" onclick="cambiarCantidad('cantidad-fried', -1)">-</button>
                                 <input type="number" id="cantidad-fried" value="1" min="1" readonly>
@@ -151,8 +157,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Fried Onion Burger', 20000, document.getElementById('cantidad-fried').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Fried Onion Burger Combo', 30000, document.getElementById('cantidad-fried').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Fried Onion Burger', 20000, document.getElementById('cantidad-fried').value)">Add</button>
+                            <button class="add-button1" onclick="addItem('Fried Onion Burger Combo', 30000, document.getElementById('cantidad-fried').value)">Add Combo</button>
                         </div>
 
 
@@ -162,17 +168,19 @@
                 <div class="item">
                     <img src="imagenes/Libra01.jpg" alt="Hamburguesa Libra">
                     <div class="item-details">
-                        <h2 class='nombre'>Cuarto de Libra (Homenaje)</h2>
-                        <p>Pan classic con semilla, doble ultra smash (70g cada), doble cheddar, cebolla en cubos, pepinillos en rodajas, ketchup y mostaza.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <h2 class='nombre'>Quarter Pounder (Tribute)</h2>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-libra">20000</span></p>
+                        <p>Classic seeded bun, double ultra smash (70g each), double cheddar, diced onion, sliced pickles, ketchup and mustard.</p>
+
+                        <p class="combo_descripcion">The combo includes: burger + portion of French fries + 250ml Coca-Cola</p>
+
+                        <p class='price'>Price PYG <span class="precio" id="precio-libra">20000</span></p>
 
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-libra-combo">30000</span> </p>
+                        <p class='price'>Combo Price PYG <span class="precio" id="precio-libra-combo">30000</span> </p>
 
                         <div class="quantity-container">
-                            <label for="cantidad-libra">Cantidad:</label>
+                            <label for="cantidad-libra">Quantity:</label>
                             <div class="quantity-controls">
                                 <button class="quantity-button" onclick="cambiarCantidad('cantidad-libra', -1)">-</button>
                                 <input type="number" id="cantidad-libra" value="1" min="1" readonly>
@@ -180,8 +188,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Libra Burger', 20000, document.getElementById('cantidad-libra').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Libra Burger Combo', 30000, document.getElementById('cantidad-libra').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Libra Burger', 20000, document.getElementById('cantidad-libra').value)">Add</button>
+                            <button class="add-button1" onclick="addItem('Libra Burger Combo', 30000, document.getElementById('cantidad-libra').value)">Add Combo</button>
                         </div>
 
 
@@ -192,16 +200,17 @@
                     <img src="imagenes/American01.jpg" alt="Hamburguesa American">
                     <div class="item-details">
                         <h2 class='nombre'>American</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, bacon crujiente, huevo frito, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <p>Classic bun, double ultra smash (70g each), double cheddar, crispy bacon, fried egg, garlic mayo.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-american">24000</span></p>
+                        <p class="combo_descripcion">The combo includes: burger + portion of French fries + 250ml Coca-Cola</p>
+
+                        <p class='price'>Price PYG <span class="precio" id="precio-american">24000</span></p>
 
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-american-combo">34000</span> </p>
+                        <p class='price'>Combo Price PYG <span class="precio" id="precio-american-combo">34000</span> </p>
 
                         <div class="quantity-container">
-                            <label for="cantidad-american">Cantidad:</label>
+                            <label for="cantidad-american">Quantity:</label>
                             <div class="quantity-controls">
                                 <button class="quantity-button" onclick="cambiarCantidad('cantidad-american', -1)">-</button>
                                 <input type="number" id="cantidad-american" value="1" min="1" readonly>
@@ -209,8 +218,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('American Burger', 24000, document.getElementById('cantidad-american').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('American Burger Combo', 34000, document.getElementById('cantidad-american').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('American Burger', 24000, document.getElementById('cantidad-american').value)">Add</button>
+                            <button class="add-button1" onclick="addItem('American Burger Combo', 34000, document.getElementById('cantidad-american').value)">Add Combo</button>
                         </div>
 
 
@@ -221,16 +230,17 @@
                     <img src="imagenes/Kids01.jpg" alt="Hamburguesa Kids">
                     <div class="item-details">
                         <h2 class='nombre'>Kids</h2>
-                        <p>Pan classic, ultra smash (70g), doble cheddar, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <p>Classic bun, ultra smash (70g), double cheddar, garlic mayo.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-kids">15000</span></p>
+                        <p class="combo_descripcion">The combo includes: burger + portion of French fries + 250ml Coca-Cola</p>
+
+                        <p class='price'>Price PYG <span class="precio" id="precio-kids">15000</span></p>
 
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-kids-combo">25000</span> </p>
+                        <p class='price'>Combo Price PYG <span class="precio" id="precio-kids-combo">25000</span> </p>
 
                         <div class="quantity-container">
-                            <label for="cantidad-kids">Cantidad:</label>
+                            <label for="cantidad-kids">Quantity:</label>
                             <div class="quantity-controls">
                                 <button class="quantity-button" onclick="cambiarCantidad('cantidad-kids', -1)">-</button>
                                 <input type="number" id="cantidad-kids" value="1" min="1" readonly>
@@ -238,8 +248,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Kids Burger', 15000, document.getElementById('cantidad-kids').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Kids Burger Combo', 25000, document.getElementById('cantidad-kids').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Kids Burger', 15000, document.getElementById('cantidad-kids').value)">Add</button>
+                            <button class="add-button1" onclick="addItem('Kids Burger Combo', 25000, document.getElementById('cantidad-kids').value)">Add Combo</button>
                         </div>
 
 
@@ -252,20 +262,21 @@
 
 <!-- Contenido de cada pestaña -->
 <div id="Acompañamientos" class="tabcontent">
-    <h2>Acompañamientos</h2>
+    <h2>Fries & More</h2>
     <!-- Aquí va el código HTML de las burgers -->
     <div class="menu">
         <div class="item">
             <img src="imagenes/Fritas01.jpg" alt="Papas Fritas">
             <div class="item-details">
-                <h2 class='nombre'>Papas Fritas</h2>
-                <p>Porción de entre 80g a 90g de papas fritas crujientes cocidas en aceite de girasol, acompaña un sachet de ketchup.</p>
+                <h2 class='nombre'>French Fries</h2>
+                <p>Portion of 80g to 90g of crispy French fries cooked in sunflower oil, served with a sachet of ketchup.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-fritas">7000</span></p>
+
+                <p class='price'>Price PYG <span class="precio" id="precio-fritas">7000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-fritas">Cantidad:</label>
+                    <label for="cantidad-fritas">Quantity:</label>
                     <div class="quantity-controls">
                         <button class="quantity-button" onclick="cambiarCantidad('cantidad-fritas', -1)">-</button>
                         <input type="number" id="cantidad-fritas" value="1" min="1" readonly>
@@ -273,7 +284,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Papas Fritas', 7000, document.getElementById('cantidad-fritas').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Papas Fritas', 7000, document.getElementById('cantidad-fritas').value)">Add</button>
                 </div>
 
 
@@ -283,14 +294,14 @@
         <div class="item">
             <img src="imagenes/nuggets2.png" alt="Nuggets de Pollo">
             <div class="item-details">
-                <h2 class='nombre'>Nuggets de Pollo</h2>
-                <p>Seis unidades de nuggets de pollo, acompaña un pote de salsa barbacoa 30g.</p>
+                <h2 class='nombre'>Chicken Nuggets</h2>
+                <p>Six pieces of chicken nuggets, served with a 30g cup of barbecue sauce.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-nuggets">10000</span></p>
+                <p class='price'>Price PYG <span class="precio" id="precio-nuggets">10000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-nuggets">Cantidad:</label>
+                    <label for="cantidad-nuggets">Quantity:</label>
                     <div class="quantity-controls">
                         <button class="quantity-button" onclick="cambiarCantidad('cantidad-nuggets', -1)">-</button>
                         <input type="number" id="cantidad-nuggets" value="1" min="1" readonly>
@@ -298,7 +309,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Nuggets de Pollo', 10000, document.getElementById('cantidad-nuggets').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Nuggets de Pollo', 10000, document.getElementById('cantidad-nuggets').value)">Add</button>
                 </div>
 
 
@@ -310,13 +321,12 @@
             <img src="imagenes/CocaLata01.jpg" alt="Coca Cola 350ml">
             <div class="item-details">
                 <h2 class='nombre'>Coca Cola 350ml</h2>
-                <p>Bebida gasificada sabor cola en lata de 350ml.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-coca350">6000</span></p>
+                <p class='price'>Price PYG <span class="precio" id="precio-coca350">6000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-coca350">Cantidad:</label>
+                    <label for="cantidad-coca350">Quantity:</label>
                     <div class="quantity-controls">
                         <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca350', -1)">-</button>
                         <input type="number" id="cantidad-coca350" value="1" min="1" readonly>
@@ -324,7 +334,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Coca Cola 350ml', 6000, document.getElementById('cantidad-coca350').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Coca Cola 350ml', 6000, document.getElementById('cantidad-coca350').value)">Add</button>
                 </div>
 
             </div>
@@ -334,13 +344,12 @@
             <img src="imagenes/coca1l.jpg" alt="Coca Cola 1L">
             <div class="item-details">
                 <h2 class='nombre'>Coca Cola 1L</h2>
-                <p>Bebida gasificada sabor cola en botella de 1 litro.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-coca1l">8000</span></p>
+                <p class='price'>Price PYG <span class="precio" id="precio-coca1l">8000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-coca1l">Cantidad:</label>
+                    <label for="cantidad-coca1l">Quantity:</label>
                     <div class="quantity-controls">
                         <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca1l', -1)">-</button>
                         <input type="number" id="cantidad-coca1l" value="1" min="1" readonly>
@@ -348,7 +357,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Coca Cola 1L', 8000, document.getElementById('cantidad-coca1l').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Coca Cola 1L', 8000, document.getElementById('cantidad-coca1l').value)">Add</button>
                 </div>
 
             </div>
@@ -443,93 +452,24 @@
 
 <!-- Contenido de cada pestaña -->
 <div id="Lomi Árabe" class="tabcontent">
-    <h2>Lomi Árabe</h2>
+    <h2>Arabian Shawarma</h2>
     <!-- Aquí va el código HTML de las burgers -->
     <div class="menu">
-        <div class="item">
-            <img src="imagenes/ArabeSimple01.jpg" alt="Árabe Simple Pollo">
-            <div class="item-details">
-                <h2 class='nombre'>Lomi Árabe Pollo</h2>
-
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne pollo, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-arabepollo">20000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-arabepollo">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabepollo', -1)">-</button>
-                        <input type="number" id="cantidad-arabepollo" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabepollo', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Árabe Simple Pollo', 20000, document.getElementById('cantidad-arabepollo').value)">Añadir</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="imagenes/ArabeSimple01.jpg" alt="Árabe Simple Vacuno">
-            <div class="item-details">
-                <h2 class='nombre'>Lomi Árabe Vacuno</h2>
-
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-arabevacuno">24000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-arabevacuno">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabevacuno', -1)">-</button>
-                        <input type="number" id="cantidad-arabevacuno" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabevacuno', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Árabe Simple Vacuno', 24000, document.getElementById('cantidad-arabevacuno').value)">Añadir</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="imagenes/ArabeSimple01.jpg" alt="Árabe Simple Mixto">
-            <div class="item-details">
-                <h2 class='nombre'>Lomi Árabe Mixto</h2>
-
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-arabemixto">22000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-arabemixto">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabemixto', -1)">-</button>
-                        <input type="number" id="cantidad-arabemixto" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabemixto', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Árabe Simple Mixto', 22000, document.getElementById('cantidad-arabemixto').value)">Añadir</button>
-                </div>
-            </div>
-        </div>
+        
 
         <div class="item">
             <img src="imagenes/ArabeCompleto01.jpg" alt="Árabe Completo Mixto">
             <div class="item-details">
-                <h2 class='nombre'>Lomi Árabe Completo Mixto</h2>
+                <h2 class='nombre'>Complete Mixed Arabic Lomi</h2>
 
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, queso muzarella, huevo frito, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
+                <p>Arabic bread, shredded cabbage, diced tomato, beef and chicken, mozzarella cheese, fried egg, garlic sauce. Served with a 30ml garlic sauce cup.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-arabecompletomixto">25000</span></p>
+
+                <p class='price'>Price PYG <span class="precio" id="precio-arabecompletomixto">25000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-arabecompletomixto">Cantidad:</label>
+                    <label for="cantidad-arabecompletomixto">Quantity:</label>
                     <div class="quantity-controls">
                         <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletomixto', -1)">-</button>
                         <input type="number" id="cantidad-arabecompletomixto" value="1" min="1" readonly>
@@ -537,7 +477,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Árabe Completo Mixto', 25000, document.getElementById('cantidad-arabecompletomixto').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Árabe Completo Mixto', 25000, document.getElementById('cantidad-arabecompletomixto').value)">Add</button>
                 </div>
             </div>
         </div>
@@ -545,15 +485,17 @@
         <div class="item">
             <img src="imagenes/ArabeCompleto01.jpg" alt="Árabe Completo Pollo">
             <div class="item-details">
-                <h2 class='nombre'>Lomi Árabe Completo Pollo</h2>
+                <h2 class='nombre'>Complete Arabic Lomi Chicken</h2>
 
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne de pollo, queso muzarella, huevo frito salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-arabecompletopollo">23000</span></p>
+                <p>Arabic bread, shredded cabbage, diced tomato, chicken, mozzarella cheese, fried egg, garlic sauce. Served with a 30ml garlic sauce cup.</p>
+
+
+                <p class='price'>Price PYG <span class="precio" id="precio-arabecompletopollo">23000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-arabecompletopollo">Cantidad:</label>
+                    <label for="cantidad-arabecompletopollo">Quantity:</label>
                     <div class="quantity-controls">
                         <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletopollo', -1)">-</button>
                         <input type="number" id="cantidad-arabecompletopollo" value="1" min="1" readonly>
@@ -561,7 +503,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Árabe Completo Pollo', 23000, document.getElementById('cantidad-arabecompletopollo').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Árabe Completo Pollo', 23000, document.getElementById('cantidad-arabecompletopollo').value)">Add</button>
                 </div>
             </div>
         </div>
@@ -569,15 +511,17 @@
         <div class="item">
             <img src="imagenes/ArabeCompleto01.jpg" alt="Árabe Completo Vacuno">
             <div class="item-details">
-                <h2 class='nombre'>Lomi Árabe Completo Vacuno</h2>
+                <h2 class='nombre'>Complete Arabic Lomi Beef</h2>
 
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-arabecompletovacuno">27000</span></p>
+                <p>Arabic bread, shredded cabbage, diced tomato, beef, garlic sauce. Served with a 30ml garlic sauce cup.</p>
+
+
+                <p class='price'>Price PYG <span class="precio" id="precio-arabecompletovacuno">27000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-arabecompletovacuno">Cantidad:</label>
+                    <label for="cantidad-arabecompletovacuno">Quantity:</label>
                     <div class="quantity-controls">
                         <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletovacuno', -1)">-</button>
                         <input type="number" id="cantidad-arabecompletovacuno" value="1" min="1" readonly>
@@ -585,7 +529,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Árabe Completo Vacuno', 27000, document.getElementById('cantidad-arabecompletovacuno').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Árabe Completo Vacuno', 27000, document.getElementById('cantidad-arabecompletovacuno').value)">Add</button>
                 </div>
             </div>
         </div>
@@ -593,15 +537,17 @@
         <div class="item">
             <img src="imagenes/Shawarma01.jpg" alt="Shawarma Mixto">
             <div class="item-details">
-                <h2 class='nombre'>Shawarma Mixto</h2>
+                <h2 class='nombre'>Mixed Shawarma</h2>
 
-                <p>Pan árabe, papas fritas, lechuga rallada, tomate en cubos, cebolla morada en julianas, carne vacuna y de pollo, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
+             
+                <p>Arabic bread, French fries, shredded lettuce, diced tomato, julienned red onion, beef and chicken, garlic sauce. Served with a 30ml garlic sauce cup.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-shawarmamixto">25000</span></p>
+
+                <p class='price'>Price PYG <span class="precio" id="precio-shawarmamixto">25000</span></p>
 
 
                 <div class="quantity-container">
-                    <label for="cantidad-shawarmamixto">Cantidad:</label>
+                    <label for="cantidad-shawarmamixto">Quantity:</label>
                     <div class="quantity-controls">
                         <button class="quantity-button" onclick="cambiarCantidad('cantidad-shawarmamixto', -1)">-</button>
                         <input type="number" id="cantidad-shawarmamixto" value="1" min="1" readonly>
@@ -609,7 +555,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Shawarma Mixto', 25000, document.getElementById('cantidad-shawarmamixto').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Shawarma Mixto', 25000, document.getElementById('cantidad-shawarmamixto').value)">Add</button>
                 </div>
             </div>
         </div>
@@ -640,7 +586,7 @@
 
 
         <!-- Botón de finalizar pedido, inicialmente oculto -->
-        <button id="finalizarPedidoBtn" class="send-button hidden" onclick="enviarPedido()">Pedir por Whatsapp (Gs 0)</button>
+        <button id="finalizarPedidoBtn" class="send-button hidden" onclick="enviarPedido()">Order via Whatsapp (PYG 0)</button>
     </div>
 
     <div id="notification" class="notification hidden">Artículo añadido al pedido</div>
@@ -651,12 +597,12 @@
 <div id="extrasModal" class="modal hidden">
     <div class="modal-content">
         <span class="close" onclick="cerrarModal()">&times;</span>
-        <h2>Selecciona Extras</h2>
+        <h2>Select Extras</h2>
 
         <label class="custom-checkbox">
             <input type="checkbox" id="extraCarne" onchange="toggleInput('extraCarne', 'cantidadExtraCarne')">
             <span class="checkmark"></span>
-            Extra Carne (Gs 5000):
+            Extra Beef (Gs 5000):
             <input type="number" id="cantidadExtraCarne" value="0" min="0" disabled>
         </label><br>
 
@@ -678,21 +624,21 @@
         <label class="custom-checkbox">
             <input type="checkbox" id="extraHuevo" onchange="toggleInput('extraHuevo', 'cantidadExtraHuevo')">
             <span class="checkmark"></span>
-            Extra Huevo Frito (Gs 4000):
+            Extra Fried Egg (Gs 4000):
             <input type="number" id="cantidadExtraHuevo" value="0" min="0" disabled>
         </label><br>
 
         <label class="custom-checkbox">
             <input type="checkbox" id="extraLechuga" onchange="toggleInput('extraLechuga', 'cantidadExtraLechuga')">
             <span class="checkmark"></span>
-            Extra Lechuga (Gs 2000):
+            Extra Lettuce (Gs 2000):
             <input type="number" id="cantidadExtraLechuga" value="0" min="0" disabled>
         </label><br>
 
         <label class="custom-checkbox">
             <input type="checkbox" id="extraTomate" onchange="toggleInput('extraTomate', 'cantidadExtraTomate')">
             <span class="checkmark"></span>
-            Extra Tomate (Gs 1000):
+            Extra Tomato (Gs 1000):
             <input type="number" id="cantidadExtraTomate" value="0" min="0" disabled>
         </label><br>
 
@@ -701,7 +647,7 @@
             <input type="text" id="otrosExtras" placeholder="Observaciones">
         </label><br><br>
 
-        <button class="add-button2" onclick="confirmarPedido()">Confirmar Pedido</button>
+        <button class="add-button2" onclick="confirmarPedido()">Confirm</button>
     </div>
 </div>
 
@@ -851,7 +797,7 @@ function addItem1(item, precio, cantidad) {
 
     // Actualizar el texto del botón de finalizar pedido con el total
     const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
-    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+    finalizarPedidoBtn.innerText = `Order via Whatsapp (PYG ${total.toFixed(0)})`;
 
     // Mostrar notificación de éxito
     mostrarNotificacion();
@@ -954,7 +900,7 @@ function confirmarPedido() {
 
     // Actualizar el texto del botón con el total entre paréntesis
     const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
-    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+    finalizarPedidoBtn.innerText = `Order via Whatsapp (PYG ${total.toFixed(0)})`;
 
     mostrarNotificacion();
     finalizarPedidoBtn.classList.remove('hidden');
@@ -1028,7 +974,7 @@ function confirmarPedido1() {
 
     // Actualizar el texto del botón con el total entre paréntesis
     const finalizarPedidoBtn = document.getElementById('finalizarPedidoBtn');
-    finalizarPedidoBtn.innerText = `Pedir por Whatsapp (Gs ${total.toFixed(0)})`;
+    finalizarPedidoBtn.innerText = `Order via Whatsapp (PYG ${total.toFixed(0)})`;
 
     mostrarNotificacion();
     finalizarPedidoBtn.classList.remove('hidden');
