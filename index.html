@@ -12,11 +12,11 @@
 <!-- Modal inicial -->
 <div id="inicioModal" class="modal">
     <div class="modal-content">
-        <h2>Que bueno tenerte por Don Sabor! 🍔 </h2>
-        <h3>¿Cómo quisieras que te entreguemos tu pedido? 🚚🏃</h3>
+        <h2>Hola! Un gusto tenerte por acá :) 🍔 </h2>
+        <h3>¿Tu pedido será para retirar del salón o delivery? 🚚🏃</h3>
 
         <button id="btnDelivery">Delivery</button>
-        <button id="btnRetirar">Retirar en local</button>
+        <button id="btnRetirar">Retirar en salón</button>
     </div>
 </div>
 
@@ -764,6 +764,11 @@
 </div>
 
 
+<script>function seleccionarOpcion(opcion) {
+      localStorage.setItem("tipoPedido", opcion);
+      document.getElementById("inicioModal").style.display = "none";
+      document.getElementById("contenidoPagina").style.display = "block";
+  }</script>
 
 <script>
 let pedido = [];
