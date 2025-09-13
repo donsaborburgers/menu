@@ -764,11 +764,6 @@
 </div>
 
 
-<script>function seleccionarOpcion(opcion) {
-      localStorage.setItem("tipoPedido", opcion);
-      document.getElementById("inicioModal").style.display = "none";
-      document.getElementById("contenidoPagina").style.display = "block";
-  }</script>
 
 <script>
 let pedido = [];
@@ -786,10 +781,8 @@ function seleccionarOpcion(opcion) {
     document.getElementById("contenidoPagina").style.display = "block";
 }
 
-
-
-window.onload = function() {
-    // Mostrar el modal al cargar
+document.addEventListener("DOMContentLoaded", function() {
+    // Mostrar el modal apenas el HTML esté listo
     document.getElementById("inicioModal").style.display = "flex";
 
     // Agregar eventos a los botones
@@ -800,8 +793,7 @@ window.onload = function() {
     document.getElementById("btnRetirar").addEventListener("click", function() {
         seleccionarOpcion("Retirar");
     });
-};
-
+});
 
 
 
