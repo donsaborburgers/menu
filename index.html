@@ -40,6 +40,7 @@
             <div class="menu">
 
 
+<!--|
                 
                 <div class="item">
                     <img src="imagenes/saladmozza01.jpg" alt="Salad Mozza (Especial del mes)">
@@ -70,7 +71,7 @@
                     </div>
                 </div>   
                 
-                            
+                            -->
 
 
                 <div class="item">
@@ -696,6 +697,13 @@
             <input type="number" id="cantidadExtraTomate" value="0" min="0" disabled>
         </label><br>
 
+        <label class="custom-checkbox">
+            <input type="checkbox" id="extraMozzaEmpanada" onchange="toggleInput('extraMozzaEmpanada', 'cantidadExtraMozzaEmpanada')">
+            <span class="checkmark"></span>
+            Extra Mozza Empanada (Gs 10000):
+            <input type="number" id="cantidadExtraMozzaEmpanada" value="0" min="0" disabled>
+        </label><br>
+
 
         <label>
             <input type="text" id="otrosExtras" placeholder="Observaciones">
@@ -753,6 +761,8 @@
             Extra Tomate (Gs 1000):
             <input type="number" id="cantidadExtraTomate1" value="0" min="0" disabled>
         </label><br>
+
+        
 
 
         <label>
@@ -901,6 +911,8 @@ function confirmarPedido() {
     const cantidadExtraHuevo = parseInt(document.getElementById('cantidadExtraHuevo').value) || 0;
     const cantidadExtraLechuga = parseInt(document.getElementById('cantidadExtraLechuga').value) || 0;
     const cantidadExtraTomate = parseInt(document.getElementById('cantidadExtraTomate').value) || 0;
+    const cantidadExtraMozzaEmpanada = parseInt(document.getElementById('cantidadExtraMozzaEmpanada').value) || 0;
+
 
     let extrasTexto = [];
     let subtotal = precioActual * cantidadActual; // Precio del ítem base por la cantidad
@@ -929,6 +941,10 @@ function confirmarPedido() {
     if (cantidadExtraTomate > 0) {
         extrasTexto.push(`${cantidadExtraTomate}x Extra Tomate`);
         subtotal += 1000 * cantidadExtraTomate;
+    }
+    if (cantidadExtraMozzaEmpanada > 0) {
+        extrasTexto.push(`${cantidadExtraMozzaEmpanada}x Extra Mozza Empanada`);
+        subtotal += 10000 * cantidadExtraMozzaEmpanada;
     }
     if (document.getElementById('otrosExtras').value) {
         extrasTexto.push(document.getElementById('otrosExtras').value);
@@ -975,6 +991,8 @@ function confirmarPedido1() {
     const cantidadExtraHuevo1 = parseInt(document.getElementById('cantidadExtraHuevo1').value) || 0;
     const cantidadExtraLechuga1 = parseInt(document.getElementById('cantidadExtraLechuga1').value) || 0;
     const cantidadExtraTomate1 = parseInt(document.getElementById('cantidadExtraTomate1').value) || 0;
+    const cantidadExtraMozzaEmpanada1 = parseInt(document.getElementById('cantidadExtraMozzaEmpanada1').value) || 0;
+
 
     let extrasTexto = [];
     let subtotal = precioActual * cantidadActual; // Precio del ítem base por la cantidad
@@ -1003,6 +1021,11 @@ function confirmarPedido1() {
     if (cantidadExtraTomate1 > 0) {
         extrasTexto.push(`${cantidadExtraTomate1}x Extra Tomate`);
         subtotal += 1000 * cantidadExtraTomate1;
+    }
+
+    if (cantidadExtraMozzaEmpanada1 > 0) {
+        extrasTexto.push(`${cantidadExtraMozzaEmpanada1}x Extra Mozza Empanada`);
+        subtotal += 10000 * cantidadExtraMozzaEmpanada1;
     }
     if (document.getElementById('otrosExtras').value) {
         extrasTexto.push(document.getElementById('otrosExtras').value);
@@ -1069,6 +1092,8 @@ function cerrarModal() {
     document.getElementById('cantidadExtraHuevo').value = 0;
     document.getElementById('cantidadExtraLechuga').value = 0;
     document.getElementById('cantidadExtraTomate').value = 0;
+    document.getElementById('cantidadExtraMozzaEmpanada').value = 0;
+
 
     // Resetear los checkboxes
     document.getElementById('extraCarne').checked = false;
@@ -1077,6 +1102,8 @@ function cerrarModal() {
     document.getElementById('extraHuevo').checked = false;
     document.getElementById('extraLechuga').checked = false;
     document.getElementById('extraTomate').checked = false;
+    document.getElementById('extraMozzaEmpanada').checked = false;
+
 
     // Deshabilitar todos los inputs de cantidad
     document.getElementById('cantidadExtraCarne').disabled = true;
@@ -1085,6 +1112,8 @@ function cerrarModal() {
     document.getElementById('cantidadExtraHuevo').disabled = true;
     document.getElementById('cantidadExtraLechuga').disabled = true;
     document.getElementById('cantidadExtraTomate').disabled = true;
+    document.getElementById('cantidadExtraMozzaEmpanada').disabled = true;
+
 
     // Resetear el campo de texto de "otrosExtras"
     document.getElementById('otrosExtras').value = '';
@@ -1191,6 +1220,8 @@ function actualizarSubtotal() {
     const cantidadExtraHuevo = parseInt(document.getElementById('cantidadExtraHuevo').value) || 0;
     const cantidadExtraLechuga = parseInt(document.getElementById('cantidadExtraLechuga').value) || 0;
     const cantidadExtraTomate = parseInt(document.getElementById('cantidadExtraTomate').value) || 0;
+    const cantidadExtraMozzaEmpanada = parseInt(document.getElementById('cantidadExtraMozzaEmpanada').value) || 0;
+
 
     const cantidadExtraLomi = parseInt(document.getElementById('cantidadExtraLomi').value) || 0;
     const cantidadExtraMuzza = parseInt(document.getElementById('cantidadExtraMuzza').value) || 0;
@@ -1198,6 +1229,8 @@ function actualizarSubtotal() {
     const cantidadExtraHuevo1 = parseInt(document.getElementById('cantidadExtraHuevo1').value) || 0;
     const cantidadExtraLechuga1 = parseInt(document.getElementById('cantidadExtraLechuga1').value) || 0;
     const cantidadExtraTomate1 = parseInt(document.getElementById('cantidadExtraTomate1').value) || 0;
+    const cantidadExtraMozzaEmpanada1 = parseInt(document.getElementById('cantidadExtraMozzaEmpanada1').value) || 0;
+
 
 
 
@@ -1209,6 +1242,8 @@ function actualizarSubtotal() {
     subtotal += 4000 * cantidadExtraHuevo;
     subtotal += 2000 * cantidadExtraLechuga;
     subtotal += 1000 * cantidadExtraTomate;
+    subtotal += 10000 * cantidadExtraMozzaEmpanada;
+
 
     subtotal += 7000 * cantidadExtraLomi;
     subtotal += 2000 * cantidadExtraMuzza;
@@ -1216,6 +1251,8 @@ function actualizarSubtotal() {
     subtotal += 4000 * cantidadExtraHuevo1;
     subtotal += 2000 * cantidadExtraLechuga1;
     subtotal += 1000 * cantidadExtraTomate1;
+    subtotal += 10000 * cantidadExtraMozzaEmpanada1;
+
 
 
     document.getElementById('subtotal').innerText = subtotal.toFixed(0);
