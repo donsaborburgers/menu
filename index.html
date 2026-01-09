@@ -13,8 +13,8 @@
 <div id="inicioModal" class="modal">
     <div class="modal-content">
         <h2>Hola! Un gusto tenerte por acá :) 🍔 </h2>
-        <h3>¿Tu pedido será para retirar del salón o delivery? 🚚🏃</h3>
-
+        <h3>¿Tu pedido será para delivery o retirar? 🚚🏃</h3>
+        <h4>También estamos en Don Sabor Container en la Playa Ybycu'i 🏖️</h4>
         <button id="btnDelivery">Delivery</button>
         <button id="btnRetirar">Retirar en salón</button>
     </div>
@@ -44,53 +44,17 @@
             <div class="menu">
                 
 
-
-                <!--
-                
-                <div class="item">
-                    <img src="imagenes/saladmozza01.jpg" alt="Salad Mozza (Especial del mes)">
-                    <div class="item-details">
-                        <h2 class='nombre'>Salad Mozza (Especial del mes)</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, cebolla morada, lechuga repollada, tomate, mozzarella empanada, mayo y ketchup.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
-
-                        <p class='price'>Precio Gs <span class="precio" id="precio-salad-mozza">30000</span></p>
-
-
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-salad-mozza-combo">40000</span> </p>
-
-                        <div class="quantity-container">
-                            <label for="cantidad-salad-mozza">Cantidad:</label>
-                            <div class="quantity-controls">
-                                <button class="quantity-button" onclick="cambiarCantidad('cantidad-salad-mozza', -1)">-</button>
-                                <input type="number" id="cantidad-salad-mozza" value="1" min="1" readonly>
-                                <button class="quantity-button" onclick="cambiarCantidad('cantidad-salad-mozza', 1)">+</button>
-                            </div>
-                        </div>
-
-
-                        <div class="button-container">
-                            <button class="add-button" onclick="addItem('Salad Mozza Burger', 30000, document.getElementById('cantidad-salad-mozza').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Salad Mozza Burger Combo', 40000, document.getElementById('cantidad-salad-mozza').value)">Añadir Combo</button>
-                        </div>
-                    </div>
-                </div>   
-                -->
-                
-                            
-
-
                 <div class="item">
                     <img src="imagenes/Classic01.jpg" alt="Hamburguesa Clásica">
                     <div class="item-details">
                         <h2 class='nombre'>Classic</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, tomate en fetas, lechuga repollada, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <p>Pan classic, ultra smash con cheddar, tomate en fetas, lechuga repollada, mayo ajo.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-clasica">20000</span></p>
+                        
+                        <p class='price'>Doble Gs <span class="precio" id="precio-clasica">20000</span></p>
+                        <p class='price'>Triple Gs <span class="precio" id="precio-clasica-triple">25000</span> </p>
 
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-clasica-combo">30000</span> </p>
 
                         <div class="quantity-container">
                             <label for="cantidad-clasica">Cantidad:</label>
@@ -103,8 +67,8 @@
 
 
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Classic Burger', 20000, document.getElementById('cantidad-clasica').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Classic Burger Combo', 30000, document.getElementById('cantidad-clasica').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Classic Burger Doble', 20000, document.getElementById('cantidad-clasica').value)">Añadir Doble</button>
+                            <button class="add-button1" onclick="addItem('Classic Burger Triple', 25000, document.getElementById('cantidad-clasica').value)">Añadir Triple</button>
                         </div>
                     </div>
                 </div>
@@ -113,13 +77,14 @@
                     <img src="imagenes/Bacon01.jpg" alt="Hamburguesa Bacon">
                     <div class="item-details">
                         <h2 class='nombre'>Bacon</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, bacon crujiente, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-bacon">20000</span></p>
+                        <p>Pan classic, ultra smash con cheddar, bacon, mayo ajo.</p>
 
+                        <p class='price'>Doble Gs <span class="precio" id="precio-bacon">20000</span></p>
+                        <p class='price'>Triple Gs <span class="precio" id="precio-bacon-triple">25000</span> </p>
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-bacon-combo">30000</span> </p>
+                     
+
 
                         <div class="quantity-container">
                             <label for="cantidad-bacon">Cantidad:</label>
@@ -130,8 +95,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Bacon Burger', 20000, document.getElementById('cantidad-bacon').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Bacon Burger Combo', 30000, document.getElementById('cantidad-bacon').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Bacon Burger Doble', 20000, document.getElementById('cantidad-bacon').value)">Añadir Doble</button>
+                            <button class="add-button1" onclick="addItem('Bacon Burger Triple', 25000, document.getElementById('cantidad-bacon').value)">Añadir Triple</button>
                         </div>
 
 
@@ -142,13 +107,12 @@
                     <img src="imagenes/Onion01.jpg" alt="Hamburguesa Fried Onion">
                     <div class="item-details">
                         <h2 class='nombre'>Fried Onion (Oklahoma)</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, cebolla smashada con la carne, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <p>Pan classic, ultra smash con cheddar, cebolla smash, ketchup y mayo ajo.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-fried">20000</span></p>
+                        <p class='price'>Doble Gs <span class="precio" id="precio-fried">20000</span></p>
+                        <p class='price'>Triple Gs <span class="precio" id="precio-fried-triple">25000</span> </p>
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-fried-combo">30000</span> </p>
-
+                      
                         <div class="quantity-container">
                             <label for="cantidad-fried">Cantidad:</label>
                             <div class="quantity-controls">
@@ -158,8 +122,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Fried Onion Burger', 20000, document.getElementById('cantidad-fried').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Fried Onion Burger Combo', 30000, document.getElementById('cantidad-fried').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Fried Onion Burger Doble', 20000, document.getElementById('cantidad-fried').value)">Añadir Doble</button>
+                            <button class="add-button1" onclick="addItem('Fried Onion Burger Triple', 25000, document.getElementById('cantidad-fried').value)">Añadir Triple</button>
                         </div>
 
 
@@ -170,13 +134,12 @@
                     <img src="imagenes/Libra01.jpg" alt="Hamburguesa Libra">
                     <div class="item-details">
                         <h2 class='nombre'>Cuarto de Libra (Homenaje)</h2>
-                        <p>Pan classic con semilla, doble ultra smash (70g cada), doble cheddar, cebolla en cubos, pepinillos en rodajas, ketchup y mostaza.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <p>Pan classic, ultra smash con cheddar, cebolla, pepinillo, ketchup y mostaza.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-libra">20000</span></p>
+                        <p class='price'>Doble Gs <span class="precio" id="precio-libra">25000</span></p>
+                        <p class='price'>Triple Gs <span class="precio" id="precio-libra-triple">25000</span> </p>
 
-
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-libra-combo">30000</span> </p>
+                                              
 
                         <div class="quantity-container">
                             <label for="cantidad-libra">Cantidad:</label>
@@ -187,8 +150,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('Libra Burger', 20000, document.getElementById('cantidad-libra').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Libra Burger Combo', 30000, document.getElementById('cantidad-libra').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('Libra Burger Doble', 20000, document.getElementById('cantidad-libra').value)">Añadir Doble</button>
+                            <button class="add-button1" onclick="addItem('Libra Burger Triple', 25000, document.getElementById('cantidad-libra').value)">Añadir Triple</button>
                         </div>
 
 
@@ -199,13 +162,12 @@
                     <img src="imagenes/American01.jpg" alt="Hamburguesa American">
                     <div class="item-details">
                         <h2 class='nombre'>American</h2>
-                        <p>Pan classic, doble ultra smash (70g cada), doble cheddar, bacon crujiente, huevo frito, mayo ajo.</p>
-                        <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
+                        <p>Pan classic, ultra smash con cheddar, bacon, huevo frito, mayo ajo.</p>
 
-                        <p class='price'>Precio Gs <span class="precio" id="precio-american">24000</span></p>
+                        <p class='price'>Doble Gs <span class="precio" id="precio-american">24000</span></p>
+                        <p class='price'>Triple Gs <span class="precio" id="precio-american-triple">29000</span> </p>
 
 
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-american-combo">34000</span> </p>
 
                         <div class="quantity-container">
                             <label for="cantidad-american">Cantidad:</label>
@@ -216,8 +178,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="add-button" onclick="addItem('American Burger', 24000, document.getElementById('cantidad-american').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('American Burger Combo', 34000, document.getElementById('cantidad-american').value)">Añadir Combo</button>
+                            <button class="add-button" onclick="addItem('American Burger Doble', 24000, document.getElementById('cantidad-american').value)">Añadir Doble</button>
+                            <button class="add-button1" onclick="addItem('American Burger Triple', 29000, document.getElementById('cantidad-american').value)">Añadir Triple</button>
                         </div>
 
 
@@ -228,13 +190,11 @@
                     <img src="imagenes/Kids01.jpg" alt="Hamburguesa Kids">
                     <div class="item-details">
                         <h2 class='nombre'>Kids</h2>
-                        <p>Pan classic, ultra smash (70g), doble cheddar, mayo ajo.</p>
+                        <p>Pan classic, ultra smash con doble cheddar, mayo clásica.</p>
                         <p class="combo_descripcion">El combo incluye: burger + una porción de papas fritas + una coca cola 250ml</p>
 
                         <p class='price'>Precio Gs <span class="precio" id="precio-kids">15000</span></p>
-
-
-                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-kids-combo">25000</span> </p>
+                        <p class='price'>Precio en Combo Gs <span class="precio" id="precio-kids-combo">27000</span> </p>
 
                         <div class="quantity-container">
                             <label for="cantidad-kids">Cantidad:</label>
@@ -246,7 +206,7 @@
                         </div>
                         <div class="button-container">
                             <button class="add-button" onclick="addItem('Kids Burger', 15000, document.getElementById('cantidad-kids').value)">Añadir</button>
-                            <button class="add-button1" onclick="addItem('Kids Burger Combo', 25000, document.getElementById('cantidad-kids').value)">Añadir Combo</button>
+                            <button class="add-button1" onclick="addItem('Kids Burger Combo', 27000, document.getElementById('cantidad-kids').value)">Añadir Combo</button>
                         </div>
 
 
@@ -254,7 +214,7 @@
                 </div>
         </div>
     </div>
-    -->
+    
 
 
 
@@ -263,13 +223,40 @@
     <h2>Acompañamientos</h2>
     <!-- Aquí va el código HTML de las burgers -->
     <div class="menu">
+
+        <div class="item">
+            <img src="imagenes/combo.png" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Combo Fritas-Coca</h2>
+                <p>Porción de papas fritas Sure Crisp de Mccain + Una coca de 250ml.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-combo">12000</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-combo">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-combo', -1)">-</button>
+                        <input type="number" id="cantidad-combo" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-combo', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Combo Fritas-Coca', 12000, document.getElementById('cantidad-combo').value)">Añadir</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
         <div class="item">
             <img src="imagenes/Fritas01.jpg" alt="Papas Fritas">
             <div class="item-details">
                 <h2 class='nombre'>Papas Fritas</h2>
-                <p>Porción de entre 80g a 90g de papas fritas crujientes cocidas en aceite de girasol, acompaña un sachet de ketchup.</p>
+                <p>Porción de entre 70g a 90g de papas fritas Sure Crisp de Mccain, acompaña un sachet de ketchup.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-fritas">7000</span></p>
+                <p class='price'>Precio Gs <span class="precio" id="precio-fritas">8000</span></p>
 
 
                 <div class="quantity-container">
@@ -281,7 +268,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Papas Fritas', 7000, document.getElementById('cantidad-fritas').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Papas Fritas', 8000, document.getElementById('cantidad-fritas').value)">Añadir</button>
                 </div>
 
 
@@ -313,6 +300,31 @@
             </div>
         </div>
 
+        <div class="item">
+            <img src="imagenes/coca250ml.png" alt="Coca Cola 250ml">
+            <div class="item-details">
+                <h2 class='nombre'>Coca Cola 250ml</h2>
+                <p>Bebida gasificada sabor cola en botella de 250ml.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-coca250">5000</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-coca350">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca250', -1)">-</button>
+                        <input type="number" id="cantidad-coca250" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-coca250', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Coca Cola 250ml', 5000, document.getElementById('cantidad-coca250').value)">Añadir</button>
+                </div>
+
+            </div>
+        </div>
+
+
 
         <div class="item">
             <img src="imagenes/CocaLata01.jpg" alt="Coca Cola 350ml">
@@ -320,7 +332,7 @@
                 <h2 class='nombre'>Coca Cola 350ml</h2>
                 <p>Bebida gasificada sabor cola en lata de 350ml.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-coca350">6000</span></p>
+                <p class='price'>Precio Gs <span class="precio" id="precio-coca350">7000</span></p>
 
 
                 <div class="quantity-container">
@@ -332,19 +344,19 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Coca Cola 350ml', 6000, document.getElementById('cantidad-coca350').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Coca Cola 350ml', 7000, document.getElementById('cantidad-coca350').value)">Añadir</button>
                 </div>
 
             </div>
         </div>
 
         <div class="item">
-            <img src="imagenes/coca1l.jpg" alt="Coca Cola 1L">
+            <img src="imagenes/coca1l.jpeg" alt="Coca Cola 1L">
             <div class="item-details">
                 <h2 class='nombre'>Coca Cola 1L</h2>
                 <p>Bebida gasificada sabor cola en botella de 1 litro.</p>
 
-                <p class='price'>Precio Gs <span class="precio" id="precio-coca1l">8000</span></p>
+                <p class='price'>Precio Gs <span class="precio" id="precio-coca1l">9000</span></p>
 
 
                 <div class="quantity-container">
@@ -356,7 +368,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Coca Cola 1L', 8000, document.getElementById('cantidad-coca1l').value)">Añadir</button>
+                    <button class="add-button" onclick="addItem1('Coca Cola 1L', 9000, document.getElementById('cantidad-coca1l').value)">Añadir</button>
                 </div>
 
             </div>
@@ -672,7 +684,7 @@
         <label class="custom-checkbox">
             <input type="checkbox" id="extraCarne" onchange="toggleInput('extraCarne', 'cantidadExtraCarne')">
             <span class="checkmark"></span>
-            Extra Carne (Gs 5000):
+            Extra Carne con cheddar (Gs 6000):
             <input type="number" id="cantidadExtraCarne" value="0" min="0" disabled>
         </label><br>
 
@@ -687,7 +699,7 @@
         <label class="custom-checkbox">
             <input type="checkbox" id="extraBacon" onchange="toggleInput('extraBacon', 'cantidadExtraBacon')">
             <span class="checkmark"></span>
-            Extra Bacon (Gs 3000):
+            Extra Bacon (Gs 4000):
             <input type="number" id="cantidadExtraBacon" value="0" min="0" disabled>
         </label><br>
 
@@ -708,7 +720,7 @@
         <label class="custom-checkbox">
             <input type="checkbox" id="extraTomate" onchange="toggleInput('extraTomate', 'cantidadExtraTomate')">
             <span class="checkmark"></span>
-            Extra Tomate (Gs 1000):
+            Extra Tomate (Gs 2000):
             <input type="number" id="cantidadExtraTomate" value="0" min="0" disabled>
         </label><br>
 
@@ -935,7 +947,7 @@ function confirmarPedido() {
     // Añadir extras al subtotal
     if (cantidadExtraCarne > 0) {
         extrasTexto.push(`${cantidadExtraCarne}x Extra Carne`);
-        subtotal += 5000 * cantidadExtraCarne;
+        subtotal += 6000 * cantidadExtraCarne;
     }
     if (cantidadExtraCheddar > 0) {
         extrasTexto.push(`${cantidadExtraCheddar}x Extra Cheddar x`);
@@ -943,7 +955,7 @@ function confirmarPedido() {
     }
     if (cantidadExtraBacon > 0) {
         extrasTexto.push(`${cantidadExtraBacon}x Extra Bacon`);
-        subtotal += 3000 * cantidadExtraBacon;
+        subtotal += 4000 * cantidadExtraBacon;
     }
     if (cantidadExtraHuevo > 0) {
         extrasTexto.push(`${cantidadExtraHuevo}x Extra Huevo Frito`);
@@ -955,7 +967,7 @@ function confirmarPedido() {
     }
     if (cantidadExtraTomate > 0) {
         extrasTexto.push(`${cantidadExtraTomate}x Extra Tomate`);
-        subtotal += 1000 * cantidadExtraTomate;
+        subtotal += 2000 * cantidadExtraTomate;
     }
     if (cantidadExtraMozzaEmpanada > 0) {
         extrasTexto.push(`${cantidadExtraMozzaEmpanada}x Extra Mozza Empanada`);
@@ -1251,12 +1263,12 @@ function actualizarSubtotal() {
 
 
     let subtotal = precioActual * cantidadActual;
-    subtotal += 5000 * cantidadExtraCarne;
+    subtotal += 6000 * cantidadExtraCarne;
     subtotal += 2000 * cantidadExtraCheddar;
-    subtotal += 3000 * cantidadExtraBacon;
+    subtotal += 4000 * cantidadExtraBacon;
     subtotal += 4000 * cantidadExtraHuevo;
     subtotal += 2000 * cantidadExtraLechuga;
-    subtotal += 1000 * cantidadExtraTomate;
+    subtotal += 2000 * cantidadExtraTomate;
     subtotal += 10000 * cantidadExtraMozzaEmpanada;
 
 

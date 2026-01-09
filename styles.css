@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-image: url('imagenes/donsabor_background.png'); /* Imagen de fondo */
+    background-image: url('imagenes/background2026.png'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
 }
@@ -213,7 +213,7 @@ p {
 }
 
 .add-button {
-    flex: 3; /* Los botones se expandirán para ocupar todo el espacio */
+    flex: 1; /* Los botones se expandirán para ocupar todo el espacio */
     background-color: #28a745;
     color: white;
     border: none;
@@ -242,7 +242,7 @@ p {
     text-align: center;
     margin: 0 5px; /* Espacio entre botones */
     transition: background-color 0.3s ease;
-    font-size: 13px;
+    font-size: 17px;
 
 }
 
