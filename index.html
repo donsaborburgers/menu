@@ -31,7 +31,7 @@
             <button class="tablinks" onclick="openTab(event, 'Burgers')" id="defaultTab">Burgers</button>
             <button class="tablinks" onclick="openTab(event, 'Acompañamientos')">Acompañamientos</button>
             <button class="tablinks" onclick="openTab(event, 'Pizzas')">Pizzas</button>
-            <!--<button class="tablinks" onclick="openTab(event, 'Lomi Árabe')">Lomi Árabe</button>-->
+            <button class="tablinks" onclick="openTab(event, 'Lomi Árabe')">Lomi Árabe</button>
         </div>
 
 
@@ -524,88 +524,6 @@
     </div>
 </div>
 
-<!-- Contenido de cada pestaña -->
-<div id="Sandwich de Lomito" class="tabcontent">
-    <h2>Sandwich de Lomito</h2>
-    <!-- Aquí va el código HTML de las burgers -->
-    <div class="menu">
-
-        <div class="item">
-            <img src="imagenes/lomiSimple01.jpg" alt="Lomito Simple">
-            <div class="item-details">
-                <h2 class='nombre'>Lomi Simple</h2>
-
-                <p>Pan pebete con semilla, lomo vacuno, doble queso muzarella, tomate en fetas, lechuga repollada, mayo de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-lomisimple">22000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-lomisimple">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-lomisimple', -1)">-</button>
-                        <input type="number" id="cantidad-lomisimple" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-lomisimple', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItemLomi('Lomito Simple', 22000, document.getElementById('cantidad-lomisimple').value)">Añadir</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="imagenes/lomiBacon01.jpg" alt="Lomi Bacon">
-            <div class="item-details">
-                <h2 class='nombre'>Lomi Bacon</h2>
-
-                <p>Pan pebete con semilla, lomo vacuno, doble queso muzarella, bacon crujiente, cebolla en cubos, pepinillos en rodajas, ketchup. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-lomibacon">24000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-lomibacon">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-lomibacon', -1)">-</button>
-                        <input type="number" id="cantidad-lomibacon" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-lomibacon', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItemLomi('Lomito Bacon', 24000, document.getElementById('cantidad-lomibacon').value)">Añadir</button>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="item">
-            <img src="imagenes/lomiCompleto01.jpg" alt="Lomito Completo">
-            <div class="item-details">
-                <h2 class='nombre'>Lomi Completo</h2>
-
-                <p>Pan pebete con semilla, lomo vacuno, doble queso muzarella, tomate en fetas, lechuga repollada, huevo frito, mayo de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-lomicompleto">25000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-lomicompleto">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-lomicompleto', -1)">-</button>
-                        <input type="number" id="cantidad-lomicompleto" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-lomicompleto', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItemLomi('Lomito Completo', 25000, document.getElementById('cantidad-lomicompleto').value)">Añadir</button>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <!-- Contenido de cada pestaña -->
@@ -615,7 +533,6 @@
     <div class="menu">
         <div class="item">
             <img src="imagenes/ArabeSimple01.jpg" alt="Árabe Simple Pollo">
-<!--
 
             <div class="item-details">
                 <h2 class='nombre'>Lomi Árabe Pollo</h2>
@@ -638,7 +555,31 @@
                 </div>
             </div>
         </div>
-        -->
+
+        <div class="item">
+            <img src="imagenes/ArabeCompleto01.jpg" alt="Árabe Completo Pollo">
+            <div class="item-details">
+                <h2 class='nombre'>Lomi Árabe Completo Pollo</h2>
+
+                <p>Pan árabe, repollo rallado, tomate en cubos, carne de pollo, queso mozzarella, huevo frito salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-arabecompletopollo">23000</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-arabecompletopollo">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletopollo', -1)">-</button>
+                        <input type="number" id="cantidad-arabecompletopollo" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletopollo', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Árabe Completo Pollo', 23000, document.getElementById('cantidad-arabecompletopollo').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+        
 
         <div class="item">
             <img src="imagenes/ArabeSimple01.jpg" alt="Árabe Simple Vacuno">
@@ -664,7 +605,31 @@
             </div>
         </div>
 
-<!--
+        <div class="item">
+            <img src="imagenes/ArabeCompleto01.jpg" alt="Árabe Completo Vacuno">
+            <div class="item-details">
+                <h2 class='nombre'>Lomi Árabe Completo Vacuno</h2>
+
+                <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-arabecompletovacuno">27000</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-arabecompletovacuno">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletovacuno', -1)">-</button>
+                        <input type="number" id="cantidad-arabecompletovacuno" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletovacuno', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Árabe Completo Vacuno', 27000, document.getElementById('cantidad-arabecompletovacuno').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+
+
         <div class="item">
             <img src="imagenes/ArabeSimple01.jpg" alt="Árabe Simple Mixto">
             <div class="item-details">
@@ -695,7 +660,7 @@
             <div class="item-details">
                 <h2 class='nombre'>Lomi Árabe Completo Mixto</h2>
 
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, queso muzarella, huevo frito, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
+                <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, queso mozzarella, huevo frito, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
 
                 <p class='price'>Precio Gs <span class="precio" id="precio-arabecompletomixto">25000</span></p>
 
@@ -713,81 +678,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="item">
-            <img src="imagenes/ArabeCompleto01.jpg" alt="Árabe Completo Pollo">
-            <div class="item-details">
-                <h2 class='nombre'>Lomi Árabe Completo Pollo</h2>
-
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne de pollo, queso muzarella, huevo frito salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-arabecompletopollo">23000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-arabecompletopollo">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletopollo', -1)">-</button>
-                        <input type="number" id="cantidad-arabecompletopollo" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletopollo', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Árabe Completo Pollo', 23000, document.getElementById('cantidad-arabecompletopollo').value)">Añadir</button>
-                </div>
-            </div>
-        </div>
-        -->
-
-        <div class="item">
-            <img src="imagenes/ArabeCompleto01.jpg" alt="Árabe Completo Vacuno">
-            <div class="item-details">
-                <h2 class='nombre'>Lomi Árabe Completo Vacuno</h2>
-
-                <p>Pan árabe, repollo rallado, tomate en cubos, carne vacuna y de pollo, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-arabecompletovacuno">27000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-arabecompletovacuno">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletovacuno', -1)">-</button>
-                        <input type="number" id="cantidad-arabecompletovacuno" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-arabecompletovacuno', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Árabe Completo Vacuno', 27000, document.getElementById('cantidad-arabecompletovacuno').value)">Añadir</button>
-                </div>
-            </div>
-        </div>
-
-<!--
-        <div class="item">
-            <img src="imagenes/Shawarma01.jpg" alt="Shawarma Mixto">
-            <div class="item-details">
-                <h2 class='nombre'>Shawarma Mixto</h2>
-
-                <p>Pan árabe, papas fritas, lechuga rallada, tomate en cubos, cebolla morada en julianas, carne vacuna y de pollo, salsa de ajo. Acompaña un pote de salsa de ajo de 30ml.</p>
-
-                <p class='price'>Precio Gs <span class="precio" id="precio-shawarmamixto">25000</span></p>
-
-
-                <div class="quantity-container">
-                    <label for="cantidad-shawarmamixto">Cantidad:</label>
-                    <div class="quantity-controls">
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-shawarmamixto', -1)">-</button>
-                        <input type="number" id="cantidad-shawarmamixto" value="1" min="1" readonly>
-                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-shawarmamixto', 1)">+</button>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button class="add-button" onclick="addItem1('Shawarma Mixto', 25000, document.getElementById('cantidad-shawarmamixto').value)">Añadir</button>
-                </div>
-            </div>
-        </div>
-        -->
 
     </div>
 </div>
