@@ -224,6 +224,30 @@
     <!-- Aquí va el código HTML de las pizzas -->
     <div class="menu">
 
+        
+        div class="item">
+            <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Pizza Pollo Requesón (mitad)</h2>
+                <p>Masa fina semi crocante, queso mozzarella, carne de pollo desmechado, requesón, orégano.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-pollorque">32500</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-polloreque">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-polloreque', -1)">-</button>
+                        <input type="number" id="cantidad-polloreque" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-polloreque', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Pizza Mitad Pollo Requesón', 32500, document.getElementById('cantidad-polloreque').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+
         <div class="item">
             <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
             <div class="item-details">
