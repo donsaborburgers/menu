@@ -30,7 +30,8 @@
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Burgers')" id="defaultTab">Burgers</button>
             <button class="tablinks" onclick="openTab(event, 'Acompañamientos')">Acompañamientos</button>
-            <button class="tablinks" onclick="openTab(event, 'Pizzas')">Pizzas</button>
+            <button class="tablinks" onclick="openTab(event, 'Pizza Extra Grande')">Pizza Extra Grande</button>
+            <button class="tablinks" onclick="openTab(event, 'Pizza Personal')">Pizza Personal</button>
             <button class="tablinks" onclick="openTab(event, 'Lomi Árabe')">Lomi Árabe</button>
         </div>
 
@@ -218,8 +219,8 @@
     
 
 <!-- Contenido de cada pestaña -->
-<div id="Pizzas" class="tabcontent">
-    <h2>Pizzas</h2>
+<div id="Pizza Extra Grande" class="tabcontent">
+    <h2>Pizzas Extra grande</h2>
     <p</span> Pizzas extra grande. 8 porciones. Diámetro promedio 38cm.</p>
     <!-- Aquí va el código HTML de las pizzas -->
     <div class="menu">
@@ -382,6 +383,177 @@
                 </div>
                 <div class="button-container">
                     <button class="add-button" onclick="addItem1('Pizza Mitad Jamón y Requesón', 27500, document.getElementById('cantidad-jamon').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contenido de cada pestaña -->
+<div id="Pizza Personal" class="tabcontent">
+    <h2>Pizza Personal</h2>
+    <p</span> Pizza personal. 4 porciones. Diámetro promedio 25cm.</p>
+    <!-- Aquí va el código HTML de las pizzas -->
+    <div class="menu">
+
+        <div class="item">
+            <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Pizza Personal Pollo Requesón (mitad)</h2>
+                <p>Masa fina semi crocante, queso mozzarella, carne de pollo desmechada, requesón, orégano.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-pollo-personal">12500</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-pollo-personal">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-pollo-personal', -1)">-</button>
+                        <input type="number" id="cantidad-pollo-personal" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-pollo-personal', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Pizza PersonalMitad Pollo Requesón', 12500, document.getElementById('cantidad-pollo-personal').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Pizza Personal Pepperoni (mitad)</h2>
+                <p>Masa fina semi crocante, queso mozzarella, fetas de pepperoni, orégano.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-pepperoni-personal">12500</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-pepperoni-personal">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-pepperoni-personal', -1)">-</button>
+                        <input type="number" id="cantidad-pepperoni-personal" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-pepperoni-personal', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Pizza Personal Mitad Pepperoni', 12500, document.getElementById('cantidad-pepperoni-personal').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Pizza Personal Calabresa (mitad)</h2>
+                <p>Masa fina semi crocante, queso mozzarella, fetas de calabresa, orégano.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-calabresa-personal">12500</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-calabresa-personal">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-calabresa-personal', -1)">-</button>
+                        <input type="number" id="cantidad-calabresa-personal" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-calabresa-personal', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Pizza Personal Mitad Calabresa', 12500, document.getElementById('cantidad-calabresa-personal').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Pizza Personal Margarita (mitad)</h2>
+                <p>Masa fina semi crocante, queso mozzarella, tomate en cubos, albahaca fresca, orégano.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-margarita-personal">12500</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-margarita-personal">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-margarita-personal', -1)">-</button>
+                        <input type="number" id="cantidad-margarita-personal" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-margarita-personal', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Pizza Personal Mitad Margarita', 12500, document.getElementById('cantidad-margarita-personal').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Pizza Personal Choclo y Bacon (mitad)</h2>
+                <p>Masa fina semi crocante, queso mozzarella, choclo, bacon en cubitos, orégano.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-choclo-personal">12500</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-choclo-personal">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-choclo-personal', -1)">-</button>
+                        <input type="number" id="cantidad-choclo-personal" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-choclo-personal', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Pizza Personal Mitad Choclo y Bacon', 12500, document.getElementById('cantidad-choclo-personal').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Pizza Personal Cebolla y Bacon (mitad)</h2>
+                <p>Masa fina semi crocante, queso mozzarella, cebolla fina en aros, bacon en cubitos, orégano.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-cebolla-personal">12500</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-cebolla-personal">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-cebolla-personal', -1)">-</button>
+                        <input type="number" id="cantidad-cebolla-personal" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-cebolla'-personal, 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Pizza Personal Mitad Cebolla y Bacon', 12500, document.getElementById('cantidad-cebolla-personal').value)">Añadir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="imagenes/pizza.jpg" alt="Combo Fritas-Coca">
+            <div class="item-details">
+                <h2 class='nombre'>Pizza Personal Jamón y Requesón (mitad)</h2>
+                <p>Masa fina semi crocante, queso mozzarella, jamonada en cubos, requesón, orégano.</p>
+
+                <p class='price'>Precio Gs <span class="precio" id="precio-jamon-personal">12500</span></p>
+
+
+                <div class="quantity-container">
+                    <label for="cantidad-jamon-personal">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-jamon-personal', -1)">-</button>
+                        <input type="number" id="cantidad-jamon-personal" value="1" min="1" readonly>
+                        <button class="quantity-button" onclick="cambiarCantidad('cantidad-jamon-personal', 1)">+</button>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem1('Pizza Personal Mitad Jamón y Requesón', 12500, document.getElementById('cantidad-jamon-personal').value)">Añadir</button>
                 </div>
             </div>
         </div>
