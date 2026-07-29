@@ -17,6 +17,15 @@ body {
     cursor: pointer;
 }
 
+#btnGiftCard {
+    background-color: #FFC107; /* amarillo ambar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #btnRetirar {
     background-color: #28a745; /* verde */
     color: white;
@@ -381,6 +390,8 @@ p {
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
+    text-align: center;
+
 }
 
 .modal-content button {

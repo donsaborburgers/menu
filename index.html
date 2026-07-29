@@ -12,11 +12,13 @@
 <!-- Modal inicial -->
 <div id="inicioModal" class="modal">
     <div class="modal-content">
-        <h2>Hola! Un gusto tenerte por acá :) 🍔 </h2>
+        <h2>Hola! Que bueno tenerte por acá 🍔 </h2>
+        <h3>Bienvenido a Don Sabor Burgers - Carmen del Paraná</h3>
         <h3>¿Tu pedido será para delivery o retirar? 🚚🏃</h3>
-        <h4>También estamos en Don Sabor Container en la Playa Ybycu'i 🏖️</h4>
         <button id="btnDelivery">Delivery</button>
         <button id="btnRetirar">Retirar en salón</button>
+        <h3>Regalá Don Sabor a tu persona favorita ❤️</h3>
+        <button id="btnGiftCard">🎁 Quiero una Gift Card</button>
     </div>
 </div>
 
@@ -1063,6 +1065,12 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("btnRetirar").addEventListener("click", function() {
         seleccionarOpcion("Retirar");
     });
+
+    // Botón Gift Card
+    document.getElementById("btnGiftCard").addEventListener("click", function() {
+        window.location.href = "giftcard.html";
+    });
+
 });
 
 

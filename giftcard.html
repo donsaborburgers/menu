@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gift Card - Don Sabor</title>
+
+
+<style>
+
+body {
+
+    font-family: Arial, sans-serif;
+    background-color:#f4f4f4;
+
+    margin:0;
+    padding:0;
+
+    background-image:url('imagenes/background2026.png');
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+
+.container {
+
+    max-width:500px;
+
+    margin:30px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+
+
+h1,h2 {
+
+    text-align:center;
+
+}
+
+
+
+label {
+
+    display:block;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+
+
+input {
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    box-sizing:border-box;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+
+}
+
+
+
+/* TARJETAS DE REGALO */
+
+
+.opciones-regalo {
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:10px;
+
+}
+
+
+
+.tarjeta {
+
+    flex:1;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    padding:15px 10px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    background:#fff;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+
+
+.tarjeta:hover {
+
+    transform:scale(1.05);
+
+    border-color:#ffc107;
+
+}
+
+
+
+.tarjeta.seleccionada {
+
+    border:3px solid #28a745;
+
+    background:#eaffea;
+
+}
+
+
+
+.emoji {
+
+    font-size:35px;
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+
+
+
+.oculto {
+
+    display:none;
+
+}
+
+
+
+
+
+.resumen {
+
+    background:#eee;
+
+    padding:15px;
+
+    margin-top:20px;
+
+    border-radius:10px;
+
+    white-space:pre-line;
+
+}
+
+
+
+button {
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#25D366;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover {
+
+    background:#1ebe5d;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="container">
+
+
+<h1>🎁 Gift Card 🎁</h1>
+
+<h2>Don Sabor Burgers 🍔</h2>
+
+
+
+
+<label>
+Para:
+</label>
+
+<input 
+type="text"
+id="nombre"
+placeholder="Nombre de quien lo recibirá">
+
+
+
+
+
+<label>
+Motivo:
+</label>
+
+<input 
+type="text"
+id="motivo"
+placeholder="Ej: Feliz Cumple, Amistad, Te quiero ❤️">
+
+
+
+
+
+<label>
+Número de contacto WhatsApp:
+</label>
+
+
+<input 
+type="tel"
+id="telefono"
+placeholder="Ej: 0985 123456">
+
+
+
+
+
+<label>
+Elegí tu regalo:
+</label>
+
+
+
+
+<div class="opciones-regalo">
+
+
+<div class="tarjeta" data-valor="🍔 Combo Burger">
+
+<span class="emoji">
+🍔
+</span>
+
+Combo Burger
+
+</div>
+
+
+
+<div class="tarjeta" data-valor="🍕 Pizza Personal">
+
+<span class="emoji">
+🍕
+
+</span>
+
+Pizza Personal
+
+</div>
+
+
+
+
+<div class="tarjeta" data-valor="🍕 Pizza Extra Grande">
+
+<span class="emoji">
+🍕
+
+</span>
+
+Pizza Extra Grande
+
+</div>
+
+
+
+
+
+<div class="tarjeta" data-valor="monto">
+
+<span class="emoji">
+💰
+
+</span>
+
+Monto para compra
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="campoMonto" class="oculto">
+
+
+<label>
+Monto de la Gift Card:
+</label>
+
+
+<input
+type="number"
+id="monto"
+placeholder="Ej: 50000">
+
+
+</div>
+
+
+
+
+
+<div class="resumen">
+
+
+<h3>Resumen</h3>
+
+
+<p id="textoResumen">
+
+Completá los datos para generar la Gift Card
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<button onclick="enviarWhatsApp()">
+
+📲 Solicitar Gift Card
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+const tarjetas = document.querySelectorAll(".tarjeta");
+
+
+const nombre = document.getElementById("nombre");
+
+const motivo = document.getElementById("motivo");
+
+const telefono = document.getElementById("telefono");
+
+const monto = document.getElementById("monto");
+
+const campoMonto = document.getElementById("campoMonto");
+
+
+let regaloSeleccionado = "";
+
+
+
+
+
+
+
+tarjetas.forEach(tarjeta => {
+
+
+    tarjeta.addEventListener("click",function(){
+
+
+
+        tarjetas.forEach(t => {
+
+            t.classList.remove("seleccionada");
+
+        });
+
+
+
+        this.classList.add("seleccionada");
+
+
+
+        regaloSeleccionado = this.dataset.valor;
+
+
+
+        if(regaloSeleccionado=="monto"){
+
+
+            campoMonto.classList.remove("oculto");
+
+
+        }else{
+
+
+            campoMonto.classList.add("oculto");
+
+            monto.value="";
+
+        }
+
+
+
+        actualizar();
+
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+
+
+nombre.addEventListener("input",actualizar);
+
+motivo.addEventListener("input",actualizar);
+
+telefono.addEventListener("input",actualizar);
+
+monto.addEventListener("input",actualizar);
+
+
+
+
+
+
+
+function actualizar(){
+
+
+
+let regalo = regaloSeleccionado;
+
+
+
+if(regaloSeleccionado=="monto"){
+
+
+    regalo = "💰 Gs " + monto.value;
+
+
+}
+
+
+
+
+let texto =
+
+`🎁 Gift Card Don Sabor 🍔
+
+
+👤 Para:
+${nombre.value}
+
+
+❤️ Motivo:
+${motivo.value}
+
+
+🎉 Regalo:
+${regalo}
+
+
+📱 Contacto:
+${telefono.value}`;
+
+
+
+
+document.getElementById("textoResumen").innerText=texto;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+function enviarWhatsApp(){
+
+
+
+if(nombre.value=="" || telefono.value=="" || regaloSeleccionado==""){
+
+
+alert("Por favor completá todos los campos");
+
+return;
+
+
+}
+
+
+
+
+if(regaloSeleccionado=="monto" && monto.value==""){
+
+
+alert("Ingresá el monto de la Gift Card");
+
+return;
+
+
+}
+
+
+
+
+
+let regaloFinal = regaloSeleccionado;
+
+
+
+if(regaloSeleccionado=="monto"){
+
+
+regaloFinal="💰 Gs "+Number(monto.value).toLocaleString("es-PY");
+
+
+}
+
+
+
+
+
+
+
+let mensaje =
+
+`🎁 *Gift Card Don Sabor* 🍔
+
+
+👤 Para:
+${nombre.value}
+
+
+❤️ Motivo:
+${motivo.value}
+
+
+🎉 Regalo:
+${regaloFinal}
+
+
+📱 Número de contacto:
+${telefono.value}
+
+
+Quiero solicitar una Gift Card 😊`;
+
+
+
+
+
+const numero="595973547459";
+
+
+
+const url =
+
+`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+
+
+window.open(url,"_blank");
+
+
+
+}
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
